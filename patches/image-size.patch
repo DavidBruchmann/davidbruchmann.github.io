@@ -1,0 +1,13 @@
+diff --git a/image-size/bin/image-size.js b/image-size/bin/image-size.js
+--- a/image-size/bin/image-size.js
++++ b/image-size/bin/image-size.js
+@@ -95,5 +95,9 @@
+     var imageHeader = readImageHeader(input, imageOffset);
+     var imageSize = getImageSize(imageHeader[0]);
+     images.push(imageSize);
++    // Guard against a zero-length entry looping forever (CVE-2025-71330)
++    if (imageHeader[1] === 0) {
++      break;
++    }
+     imageOffset += imageHeader[1];
+   }

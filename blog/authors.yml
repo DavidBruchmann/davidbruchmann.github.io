@@ -1,0 +1,28 @@
+davidbruchmann:
+  name: David Bruchmann
+  title: Freelancer since 2003
+  email: david.bruchmann@gmail.com
+  # image_url: https://gravatar.com/davidbruchmann68
+  image_url: https://gravatar.com/avatar/2cd8989c5c9dc55b469d80c9e51c58fa9064eb72271d7610d278f6aed5fb52f7?v=1335244655000&size=256&d=initials
+  page: true
+    ## customize the url of the author page at /blog/authors/<permalink>
+    # permalink: '/all-sebastien-lorber-articles'
+  socials:
+#    x: yangshunz
+    linkedin: david-bruchmann-069b9519
+    github: DavidBruchmann
+#    newsletter: https://www.greatfrontend.com
+
+#slorber:
+#  name: Sébastien Lorber
+#  title: Docusaurus maintainer
+#  url: https://sebastienlorber.com
+#  image_url: https://github.com/slorber.png
+#  page:
+#    # customize the url of the author page at /blog/authors/<permalink>
+#    permalink: '/all-sebastien-lorber-articles'
+#  socials:
+#    x: sebastienlorber
+#    linkedin: sebastienlorber
+#    github: slorber
+#    newsletter: https://thisweekinreact.com
