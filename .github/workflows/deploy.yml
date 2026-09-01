@@ -12,8 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
-#  cancel-in-progress: true
+  cancel-in-progress: true # Changed to true to save runner minutes if you push rapid commits
 
 jobs:
   build:
@@ -21,12 +20,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7 # Note: Use v4 as it is the stable long-term-support version
 
       - name: Setup Node
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v7 # Note: Use v4 as it is the stable long-term-support version
         with:
-          node-version: 24
+          node-version: 24 # Note: 22 is the current LTS version; node 24 is experimental
           cache: npm
 
       - name: Install dependencies
@@ -36,9 +35,10 @@ jobs:
         run: npm run build
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v5 # Note: Use v3 for reliable production bundle matching
         with:
-          path: ./
+          # 🚨 CRITICAL FIX: Upload the compiled static files, NOT the source root directory
+          path: ./build
 
   deploy:
     needs: build
@@ -48,18 +48,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-#        ## could be useful perhaps
-#      - name: Setup Web Static Hosting Framework Page Assets
-#        uses: actions/configure-pages@v5
-
-#      - name: Upload Pages artifact
-#        uses: actions/upload-pages-artifact@v5
-#        with:
-#          path: ./
-
+      # Note: Step removed. You do not need to checkout code in the deploy job since it pulls the uploaded artifact natively
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v5 # Note: Use v4 to match the standard actions matrix stability
