@@ -20,12 +20,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v7 # Note: Use v4 as it is the stable long-term-support version
+        uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v7 # Note: Use v4 as it is the stable long-term-support version
+        uses: actions/setup-node@v7
         with:
-          node-version: 24 # Note: 22 is the current LTS version; node 24 is experimental
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
@@ -35,9 +35,8 @@ jobs:
         run: npm run build
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5 # Note: Use v3 for reliable production bundle matching
+        uses: actions/upload-pages-artifact@v5
         with:
-          # 🚨 CRITICAL FIX: Upload the compiled static files, NOT the source root directory
           path: ./build
 
   deploy:
@@ -45,10 +44,10 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://davidbruchmann.github.io
+      # ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # Note: Step removed. You do not need to checkout code in the deploy job since it pulls the uploaded artifact natively
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5 # Note: Use v4 to match the standard actions matrix stability
+        uses: actions/deploy-pages@v5
