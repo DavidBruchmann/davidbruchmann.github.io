@@ -8,7 +8,6 @@ on:
 
 permissions:
   issues: write # Needed to automatically create a notification issue
-
 jobs:
   check-updates:
     runs-on: ubuntu-latest
@@ -21,8 +20,13 @@ jobs:
           SHA=$(echo "$RESPONSE" | jq -r '.sha')
           MESSAGE=$(echo "$RESPONSE" | jq -r '.commit.message')
 
+          # 1. Output the SHA safely (single-line string)
           echo "latest_sha=$SHA" >> $GITHUB_OUTPUT
-          echo "commit_msg=$MESSAGE" >> $GITHUB_OUTPUT
+
+          # 2. FIX: Output the message safely using an EOF block to handle spaces/slashes
+          echo "commit_msg<<EOF" >> $GITHUB_OUTPUT
+          echo "$MESSAGE" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Check Against Known Secure Commit
         id: compare

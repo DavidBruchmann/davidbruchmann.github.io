@@ -184,10 +184,12 @@ const config = {
                 label: 'Xing',
                 href: 'https://www.xing.com/profile/David_Bruchmann/',
               },
+              /*
               {
                 label: '♥️ Support Me ♥️',
                 href: 'https://www.ko-fi.com/davidbruchmann/',
               },
+              */
             ],
           },
           {
