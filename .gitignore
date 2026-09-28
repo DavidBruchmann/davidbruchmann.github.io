@@ -18,3 +18,20 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+static-dist/
+static_old/
+repo_old/
+.WIP
+
+*.kate-swp
+*.*~
+
+# TYPO3
+var/
+vendor/
+.ddev/
+!.ddev/config.yaml
+# public/
+# !public/fileadmin
+# !public/.htaccess

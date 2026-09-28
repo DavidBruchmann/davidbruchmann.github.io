@@ -1,8 +1,0 @@
-{
-  "label": "TYPO3 Upgrades",
-  "position": 3,
-  "description": "Upgrading TYPO3, extensions and sitepackage",
-  "link": {
-    "type": "generated-index"
-  }
-}

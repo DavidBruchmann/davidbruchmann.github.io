@@ -1,0 +1,292 @@
+/*
+.volumeControl {
+  position: relative;
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.volumeSlider {
+  position: relative;
+  top: 100%;
+  left: 50%;
+  transform: rotate(90deg);
+  transform: translateX(-50%);
+  width: 40px;
+  height: 120px;
+  padding: 6px;
+  cursor: pointer;
+  margin-top: 0px;
+  border: 2px solid var(--ifm-color-emphasis-300, #d0d0d0);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1000;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volumeSlider:focus-visible {
+  outline: 2px solid #1e90ff;
+  outline-offset: -2px;
+}
+
+.volumeSlider.visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.volumeTrack {
+  width: 10px;
+  height: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300, #d0d0d0);
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.volumeThumb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: grab;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s;
+}
+
+:root([data-theme='light']) .volumeThumb {
+  background-color: #1e90ff;
+}
+
+:root([data-theme='dark']) .volumeThumb {
+  background-color: #222;
+}
+
+.volumeThumb:hover {
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.5);
+}
+*/
+
+.audio-menu {
+    overflow: hidden;
+}
+.playerWrapper {
+    display: block;
+    color: #ff0;
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+}
+.playerWrapper .textContainer {
+    background: #000;
+    padding: 0.5em 0;
+    overflow: hidden;
+}
+.displayText {
+  display: inline-block;
+  width: auto;           /* Let it be as long as it needs to be */
+  min-width: 100%;
+  overflow-x: visible;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+  /* Remove any max-width here */
+}
+@media (prefers-reduced-motion: reduce) {
+  .displayText {
+    animation: none;
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.audioPlayer {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  background-color: transparent;
+  border-bottom: none;
+  overflow: visible;
+  position: relative;
+  flex: 0 0 auto;
+  justify-content: space-between;
+}
+
+.audioPlayer .button-bar {
+    display:flex;
+    gap: 1px;
+}
+
+.btn-audiobar {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: 2px solid #f00 !important;
+  line-height: 32px;
+  box-sizing: border-box;
+  font-size: 36px;
+  text-align: center;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: var(--ifm-color-emphasis-100);
+  position: relative;
+}
+
+.btn-audiobar .icon-state-default svg {
+    vertical-align: top;
+}
+.icon-actions-pause {
+    display: none;
+}
+.audio-player.active .btn-audiobar .icon-actions-pause {
+    display: initial;
+}
+.audio-player.active .btn-audiobar .icon-actions-play {
+    display: none;
+}
+/*
+// The Live Playback Indicator Badge
+.audio-toggle-container.is-playing::after {
+  content: "";
+  position: absolute;
+  top: -2px;     // Places it slightly outside the upper boundary
+  right: -2px;   // Places it slightly outside the right boundary
+  width: 12px;   // Perfect visual ratio for a 40px base button
+  height: 12px;
+  background-color: #ff3b30; // Distinct notification red
+  border: 2px solid #ffffff; // Separates the dot sharply from the icon container background
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  pointer-events: none; // Mouse clicks pass directly through down to the button
+}
+*/
+
+.audio-player .btn-mute .icon-actions-bullhorn-slash {
+    display: none;
+}
+.audio-player.muted .btn-mute .icon-actions-bullhorn-slash {
+    display: initial;
+}
+.audio-player.muted .btn-mute .icon-actions-bullhorn {
+    display: none;
+}
+.btn-audiobar.btn-stop {
+    line-height: 22px;
+    /*
+    top: -1px;
+    height: 41px;
+    */
+}
+.btn-audiobar.btn-stop .icon-size-medium svg {
+    width: 24px;
+    height: 24px;
+}
+/*
+.btn-audiobar:before {
+    content: "▶️";
+    display: block;
+    position: absolute;
+    left: -3px;
+    top: -6px;
+    filter: saturate(0);
+}
+*/
+
+
+/** +++++++++++++++++++++++++++++++++++++++ */
+.audioPlayer > .volumeControl {
+  margin-right: 0px;
+}
+
+/* Container for the slider setup */
+.volumeControl {
+  width: 40px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.volumeControl.horizontal {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  display: inline-flex;
+  gap: 1px;
+  padding: 0;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.volumeControl .btn-mute {
+    /* border-right: 1px solid var(--color-neutral) !important; */
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    overflow: visible;
+    line-height: 24px;
+}
+.volumeControl .btn-mute svg {
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 8px !important;
+}
+
+/* The bounding box for the slider interaction */
+.volumeSlider {
+  position: relative;
+  width: 10px;
+  height: 100%;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.volumeControl.horizontal .volumeSlider {
+  width: calc(100% - 40px - 1rem);
+  height: 10px;
+}
+
+/* The vertical track bar visual */
+.volumeTrack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* The moving handle node */
+.volumeThumb {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border: 2px solid #1e90ff;
+  border-radius: 50%;
+  pointer-events: none; /* Prevents the thumb from hijacking mouse coordinates during drags */
+  cursor: pointer;
+}
+
+.volumeControl.horizontal .volumeThumb {
+    left: auto;
+    top: calc(50% + 2px);
+}
