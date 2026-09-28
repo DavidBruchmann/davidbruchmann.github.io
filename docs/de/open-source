@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-<!-- 
+<!--
 	The website is created and maintained by David Bruchmann, Webdevelopment Barlian, david.bruchmann@gmail.com.
 
 	This website is powered by TYPO3 - inspiring people to share!
@@ -12,7 +12,7 @@
 	Information and contribution at https://typo3.org/
 -->
 
-<link rel="icon" href="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/favicon.ico?1778579658" type="image/vnd.microsoft.icon">
+<link rel="icon" href="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/favicon.ico" type="image/vnd.microsoft.icon">
 <title>Open Source: David Bruchmann • Web-Development</title>
 <meta http-equiv="x-ua-compatible" content="IE=edge">
 <meta name="generator" content="TYPO3 CMS">
@@ -21,13 +21,13 @@
 <meta name="apple-mobile-web-app-capable" content="no">
 
 
-<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css?1789291836" media="all">
-<link rel="stylesheet" href="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/layout.css?1778579658" media="all">
-<link rel="stylesheet" href="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/AudioPlayer.css?1790453957" media="all">
-<link href="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/main.css?1790541134" rel="stylesheet" >
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css" media="all">
+<link rel="stylesheet" href="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/layout.css" media="all">
+<link rel="stylesheet" href="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/AudioPlayer.css" media="all">
+<link href="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/main.css" rel="stylesheet" >
 
 
-<script src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/AudioPlayer.js?1790331449"></script>
+<script src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/AudioPlayer.js"></script>
 
 
 
@@ -50,35 +50,35 @@
       </div>
       <div class="menu-wrap">
         <div><label for="language-toggle" class="language-btn" title="Language Menu">
-   
-    
-        
-    
-        
+
+
+
+
+
             <span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
 	<span class="icon-markup">
-<img src="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp?1788859045" width="32" height="32" alt="" />
+<img src="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
 	</span>
-	
+
 </span>
             <!--<img title="Deutsch" alt="Deutsch" class="flag" src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="40" height="24" />-->
-        
-    
+
+
 </label></div>
         <div><label for="appearance-toggle" class="appearance-btn" title="Appearance Toggle"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-circle-half" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
 	</span>
-	
+
 </span></label></div>
-        
+
             <div><label for="audio-toggle" class="audio-btn" title="Audio Player" style="filter: saturate(0%) brightness(200%); "><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-music" data-identifier="actions-music" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-music" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-music" /></svg>
 	</span>
-	
+
 </span></label></div>
-        
+
         <div>
             <label for="menu-toggle" class="hamburger-btn" title="Page Menu">
               <span class="bar"></span>
@@ -97,35 +97,35 @@
       </div>
       <div class="menu-wrap">
         <div><label for="language-toggle" class="language-btn" title="Language Menu">
-   
-    
-        
-    
-        
+
+
+
+
+
             <span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
 	<span class="icon-markup">
-<img src="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp?1788859045" width="32" height="32" alt="" />
+<img src="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
 	</span>
-	
+
 </span>
             <!--<img title="Deutsch" alt="Deutsch" class="flag" src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="40" height="24" />-->
-        
-    
+
+
 </label></div>
         <div><label for="appearance-toggle" class="appearance-btn" title="Appearance Toggle"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-circle-half" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
 	</span>
-	
+
 </span></label></div>
-        
+
             <div><label for="audio-toggle" class="audio-btn" title="Audio Player" style="filter: saturate(0%) brightness(0%)"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-music" data-identifier="actions-music" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-music" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-music" /></svg>
 	</span>
-	
+
 </span></label></div>
-        
+
         <div>
             <label for="menu-toggle" class="hamburger-btn" title="Page Menu">
               <span class="bar"></span>
@@ -148,60 +148,60 @@
         <div>
           <input type="checkbox" id="language-toggle" class="language-toggle menu-toggle">
           <label for="language-toggle" class="language-btn" title="Language Menu">
-   
-    
-        
-    
-        
+
+
+
+
+
             <span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
 	<span class="icon-markup">
-<img src="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp?1788859045" width="32" height="32" alt="" />
+<img src="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
 	</span>
-	
+
 </span>
             <!--<img title="Deutsch" alt="Deutsch" class="flag" src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="40" height="24" />-->
-        
-    
+
+
 </label>
           <nav class="language-menu">
-            
-   
-   
-   
+
+
+
+
       <ul>
-         
+
             <li class="
                     ">
-               
+
                      <a href="/en/open-source" hreflang="en-US" class="lang-link">
                         <span class="flag-icon"><span title="English" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-gb" data-identifier="flags-gb" aria-hidden="true">
 	<span class="icon-markup">
-<img src="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/gb.webp?1788859045" width="32" height="32" alt="" />
+<img src="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/gb.webp" width="32" height="32" alt="" />
 	</span>
-	
+
 </span><!--<img title="English" alt="English" class="flag" src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/gb.svg" width="30" height="15" />--></span>
                         <span>English</span>
                      </a>
-                  
+
             </li>
-         
+
             <li class="active
                     ">
-               
+
                      <a href="/de/open-source" hreflang="de-DE" class="lang-link">
                         <span class="flag-icon"><span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
 	<span class="icon-markup">
-<img src="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp?1788859045" width="32" height="32" alt="" />
+<img src="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
 	</span>
-	
+
 </span><!--<img title="Deutsch" alt="Deutsch" class="flag" src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="30" height="18" />--></span>
                         <span>Deutsch</span>
                      </a>
-                  
+
             </li>
-         
+
       </ul>
-   
+
 
           </nav>
         </div>
@@ -210,29 +210,29 @@
           <input type="checkbox" id="appearance-toggle" class="appearance-toggle menu-toggle">
           <label for="appearance-toggle" class="appearance-btn" title="Appearance Toggle"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-circle-half" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
 	</span>
-	
+
 </span></label>
           <nav class="appearance-menu">
             <select name="appearance" size="3">
               <option value="system"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-circle-half" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
 	</span>
-	
+
 </span> System</option>
               <option value="light"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-brightness-high" data-identifier="actions-brightness-high" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-brightness-high" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-brightness-high" /></svg>
 	</span>
-	
+
 </span> Light mode</option>
               <option value="dark"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-moon" data-identifier="actions-moon" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-moon" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-moon" /></svg>
 	</span>
-	
+
 </span> Dark mode</option>
             </select>
           </nav>
@@ -251,14 +251,14 @@
                 </button>
               </div>
         -->
-        
+
             <div id="audio-player" class="audio-player">
               <input type="checkbox" id="audio-toggle" class="audio-toggle menu-toggle">
               <label for="audio-toggle" class="audio-btn" title="Audio Player"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-music" data-identifier="actions-music" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-music" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-music" /></svg>
 	</span>
-	
+
 </span></label>
                   <!--<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 3v18l-6-6H2V9h4l6-6zm4.5 9c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
@@ -274,32 +274,32 @@
                     <div class="button-bar">
                       <button id="btn-prev" class="btn-audiobar btn-prev" title="Previous (arrow keys to navigate)" aria-label="Previous track" tabindex="0"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-chevron-double-start icon-bidi" data-identifier="actions-chevron-double-start" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-chevron-double-start" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-chevron-double-start" /></svg>
 	</span>
-	
+
 </span></button>
                       <button id="btn-toggle-play-pause" class="btn-audiobar btn-toggle-play-pause" title="Play" aria-label="Play" tabindex="-1"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-play" data-identifier="actions-play" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-play" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-play" /></svg>
 	</span>
-	
+
 </span><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-pause" data-identifier="actions-pause" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-pause" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-pause" /></svg>
 	</span>
-	
+
 </span></button>
                       <button id="btn-stop" class="btn-audiobar btn-stop" title="Stop"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-square" data-identifier="actions-square" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-square" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-square" /></svg>
 	</span>
-	
+
 </span></button>
                       <button id="btn-next" class="btn-audiobar btn-next" title="Next" aria-label="Next track" tabindex="-1"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-chevron-double-end icon-bidi" data-identifier="actions-chevron-double-end" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-chevron-double-end" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-chevron-double-end" /></svg>
 	</span>
-	
+
 </span></button>
                       <!--
                       <button id="btn-fadeIn" class="btn-audiobar">fade in</button>
@@ -317,14 +317,14 @@
                     <div class="volumeControl horizontal">
                       <button id="btn-mute" class="btn-audiobar btn-mute" title="Mute" aria-label="Mute" tabindex="-1"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-bullhorn" data-identifier="actions-bullhorn" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-bullhorn" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-bullhorn" /></svg>
 	</span>
-	
+
 </span><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-bullhorn-slash" data-identifier="actions-bullhorn-slash" aria-hidden="true">
 	<span class="icon-markup">
-<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg?1788859045#actions-bullhorn-slash" /></svg>
+<svg class="icon-color"><use xlink:href="/_assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-bullhorn-slash" /></svg>
 	</span>
-	
+
 </span></button>
                       <div id="volumeSlider" class="volumeSlider" role="slider" aria-label="Volume control" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100" tabindex="0">
                         <div id="volumeTrack" class="volumeTrack" style="background: linear-gradient(to left, rgb(102, 102, 102) 0%, rgb(102, 102, 102) 74.1667%, rgb(30, 144, 255) 74.1667%, rgb(30, 144, 255) 100%);">
@@ -336,7 +336,7 @@
                 </div>
               </nav>
             </div>
-        
+
 
         <div>
           <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -346,21 +346,21 @@
             <span class="bar"></span>
           </label>
           <nav class="menu" id="main-menu">
-            
+
 <ul>
     <li class="">
         <a href="/de/" target="">
             Startseite
         </a>
     </li>
-    
+
         <li class="active current">
             <a href="/de/open-source" target="">
                 Open Source
             </a>
-            
+
         </li>
-    
+
 </ul>
 
           </nav>
@@ -371,226 +371,226 @@
 </header>
 <main id="main-content">
 <!-- 2. The SPA Content Container (Swapped out by main.js) -->
-  
+
     <div class="row">
-        
-    
-    
+
+
+
 
             <div id="c19" class="frame frame-default frame-type-text frame-layout-0">
-                
-                
-                    
 
 
 
-                
-                
-                    
 
-    
-    
-    
+
+
+
+
+
+
+
+
+
         <header>
-            
 
-    
+
+
             <h1 class="">
                 Open Source Projekte
             </h1>
-        
 
 
 
-            
 
 
 
-            
+
+
+
 
 
 
         </header>
-    
 
 
 
-                
-                
-
-    
-
-
-                
-                    
 
 
 
-                
-                
-                    
 
 
 
-                
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
 
-        
 
 
 
-    
-    
+
+
+
 
             <div id="c17" class="frame frame-default frame-type-text frame-layout-0">
-                
-                
-                    
 
 
 
-                
-                
-                    
 
-    
-    
-    
+
+
+
+
+
+
+
+
+
         <header>
-            
 
-    
-            
-                
 
-    
+
+
+
+
+
             <h2 class="">
                 TYPO3 Erweiterungen
             </h2>
-        
 
 
 
-            
-        
 
 
 
-            
 
 
 
-            
+
+
+
+
+
 
 
 
         </header>
-    
 
 
 
-                
-                
+
+
+
 
     <figure class="table"><table><thead><tr><th>Extension-Key</th><th>Description / Comment</th></tr></thead><tbody><tr><td>paste_reference</td><td><p>Die Erweiterung paste_reference vereinfacht die Arbeit von Redakteuren im Backend. Ich kümmere mich um die Upgrades für jede TYPO3 Version und um etwaige Probleme, auch wenn ich die Erweiterung nicht selbst erstellt habe.</p><p>Packagist: <a href="https://packagist.org/packages/ehaerer/paste-reference" target="_blank" rel="noreferrer">packagist.org/packages/ehaerer/paste-reference</a></p></td></tr><tr><td>backend_theme_legacy</td><td><p>TYPO3 v14.3 hat neue Backend-Icons erhalten. Für erleichterte Arbeit im Backend habe ich die alten Icons mit dieser Erweiterung zurückgebracht.</p><p>Packagist: <a href="https://packagist.org/packages/wdb/be-theme-legacy" target="_blank" rel="noreferrer">packagist.org/packages/wdb/be-theme-legacy</a></p></td></tr><tr><td>theme_camino</td><td><p>Für das TYPO3 Theme Camino habe ich einen Schalter für Hell-, Dunkel-Mode integriert. Bisher ist dies in der offiziellen Version noch nicht vorhanden. Obwohl es gut funktioniert, wären einige weitere CSS-Anpassungen vorteilhaft.<br>Auf der nachfolgend verlinkten Webseite können auch alle vier verfügbaren Farbschemen angesehen werden.</p><p>GitHub: <a href="https://davidbruchmann.github.io/typo3-theme-camino/" target="_blank" rel="noreferrer">davidbruchmann.github.io/typo3-theme-camino</a></p></td></tr></tbody></table></figure><p>&nbsp;</p>
 
 
-                
-                    
 
 
 
-                
-                
-                    
 
 
 
-                
+
+
+
+
+
+
             </div>
 
-        
 
 
 
-    
-    
+
+
+
 
             <div id="c18" class="frame frame-default frame-type-text frame-layout-0">
-                
-                
-                    
 
 
 
-                
-                
-                    
 
-    
-    
-    
+
+
+
+
+
+
+
+
+
         <header>
-            
 
-    
-            
-                
 
-    
+
+
+
+
+
             <h2 class="">
                 Statische Webseiten
             </h2>
-        
 
 
 
-            
-        
 
 
 
-            
 
 
 
-            
+
+
+
+
+
 
 
 
         </header>
-    
 
 
 
-                
-                
+
+
+
 
     <figure class="table"><table><thead><tr><th>Name</th><th>Description / Comment</th></tr></thead><tbody><tr><td><a href="https://davidbruchmann.github.io/typo3-theme-camino/" target="_blank" rel="noopener noreferrer">theme_camino (TYPO3)</a></td><td><p>Wie bereits im Zusammenhang mit TYPO3-Erweiterungen beschrieben, handelt es sich hierbei um ein Showcase für das Theme „Camino“ mit einer zusätzlichen Funktion. Die gerenderte Website wurde vom Entwicklungsserver heruntergeladen, so dass sie als statische Website bereitgestellt werden kann – die Basis bildet dennoch TYPO3.</p><p>TYPO3 eignet sich hervorragend für statische Websites, sofern keine dynamischen Elemente wie Formulare erforderlich sind. Man kann alle Vorteile von TYPO3 nutzen und die Website statisch speichern – etwa mit httrack, wget oder cURL, um sie anschließend bereitzustellen. Ein gutes Beispiel dafür ist auch die Website, die Sie gerade betrachten!</p></td></tr><tr><td><a href="https://davidbruchmann.github.io/MiddleEast/" target="_blank" rel="noopener noreferrer">Mittlerer Osten</a></td><td><p>Das Projekt „Middle East“ ist eine Zeitleiste zu Israel im Nahen Osten. Die Seite wurde ohne ein vorgefertigtes Framework erstellt, nutzt jedoch eine JavaScript-Bibliothek für die Zeitleisten-Funktionalität. Das Projekt stellt einen ersten Schritt in der Auseinandersetzung mit einem fortlaufenden politischen Prozess dar.&nbsp;</p><p>Das Projekt lässt sich zweifellos jederzeit um weitere Daten ergänzen, zudem ist vorgesehen, dass sich eine Community mit Vorschlägen, Meinungen und weiteren Beiträgen daran beteiligt.</p></td></tr><tr><td>backend_theme_legacy (Docusaurus)</td><td><p>Die statische Website für das TYPO3-Theme „backend_theme_legacy“ wurde mit Docusaurus erstellt und ist im Code-Repository enthalten. Sie ist hier zu finden: <a href="https://davidbruchmann.github.io/typo3-backend-theme-legacy" target="_blank" rel="noreferrer">davidbruchmann.github.io/typo3-backend-theme-legacy</a><br><br>Obwohl es diverse Systeme für statische Websites gibt, eignet sich Docusaurus hervorragend dazu, Markdown-Dateien in statische Websites umzuwandeln. Es bietet standardmäßig drei verschiedene Inhaltskategorien:</p><ul><li data-list-item-id="ef1f1c9182902393cf22dc57f5d5fcbf4">docs: strukturierte Ansicht mit Bereichsnavigation für Überschriften – ideal für Dokumentationen.</li><li data-list-item-id="e5ae16a8db0aeb4e4ea60b6daf101bced">blog: Blog-Funktion mit kompakten Autoreninformationen über den Artikeln – ideal für einzelne Beiträge, primär nach Datum sortiert.</li><li data-list-item-id="eebcda13304c503b140efd82317430cf0">MJS/MJX-Elemente für völlig freie Gestaltung und Strukturierung auf Basis von Require.js. Dies ermöglicht die Erstellung einzelner Seiten oder standardisierter Seitentypen nach individuellen Anforderungen.</li></ul></td></tr></tbody></table></figure>
 
 
-                
-                    
 
 
 
-                
-                
-                    
 
 
 
-                
+
+
+
+
+
+
             </div>
 
-        
+
 
 
 
 
     </div>
 
-  
+
 </main>
 <footer>
     <div class="row">
@@ -626,8 +626,8 @@
 
 </script>
 
-<script src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/main.js?1790585161"></script>
-<script src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/appearance-toogle.js?1789387680"></script>
+<script src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/main.js"></script>
+<script src="/_assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/appearance-toogle.js"></script>
 
 
 </body>
