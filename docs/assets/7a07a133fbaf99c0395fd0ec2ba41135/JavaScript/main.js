@@ -74,23 +74,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const htmlText = await response.text();
       const parser = new DOMParser();
       const nextDoc = parser.parseFromString(htmlText, 'text/html');
-      setTimeout(() => {
-        // Swap payload containers
-        document.querySelector('#main-content').innerHTML = nextDoc.querySelector('#main-content').innerHTML;
-        document.title = nextDoc.title;
-        const currentMenu = document.querySelector('#main-menu');
-        const nextMenu = nextDoc.querySelector('#main-menu');
-        if (currentMenu && nextMenu) {
-          // console.log(currentMenu, nextMenu);
-          currentMenu.innerHTML = nextMenu.innerHTML;
-        }
-        // Update the browser bar history stack smoothly
-        window.history.pushState({ url }, nextDoc.title, url);
-        //window.scrollTo(0, 0);
-        mainContent.classList.remove('is-switching');
-        //rebindMenuListeners();
-        // console.log('switch completed.');
-      }, 150);
+      if (nextDoc && nextDoc.querySelector('#main-content')?.innerHTML) {
+        setTimeout(() => {
+          // Swap payload containers
+          document.querySelector('#main-content').innerHTML = nextDoc.querySelector('#main-content').innerHTML;
+          document.title = nextDoc.title;
+          const currentMenu = document.querySelector('#main-menu');
+          const nextMenu = nextDoc.querySelector('#main-menu');
+          if (currentMenu && nextMenu) {
+            // console.log(currentMenu, nextMenu);
+            currentMenu.innerHTML = nextMenu.innerHTML;
+          }
+          // Update the browser bar history stack smoothly
+          window.history.pushState({ url }, nextDoc.title, url);
+          //window.scrollTo(0, 0);
+          mainContent.classList.remove('is-switching');
+          //rebindMenuListeners();
+          // console.log('switch completed.');
+        }, 150);
+      }
     } catch (error) {
       console.warn("SPA loading error, falling back to standard link transition:", error);
       window.location.href = url;
