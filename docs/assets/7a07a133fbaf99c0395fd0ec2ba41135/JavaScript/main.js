@@ -67,39 +67,72 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!url) {
       return;
     }
-    const mainContent = document.querySelector('#main-content');
-    mainContent.classList.add('is-switching');
+    const metadataSelectors = [
+      'link[rel="canonical"]',
+      'link[rel="alternate"]',
+      'meta[name="description"]',
+      'meta[property^="og:"]', // Catches OpenGraph previews if you have them
+    ];
+    const replacementSelectors = [
+        '#main-content',
+        '#main-menu',
+        'nav.language-menu',
+        'footer',
+    ];
+    replacementSelectors.forEach(selector => {
+        document.querySelector(selector).classList.add('is-switching');
+    });
+
     try {
       const response = await fetch(url);
-      const htmlText = await response.text();
+      if (!response.ok) throw new Error('Static file retrieval failed.');
+      const rawHtml = await response.text();
       const parser = new DOMParser();
-      const nextDoc = parser.parseFromString(htmlText, 'text/html');
-      if (nextDoc && nextDoc.querySelector('#main-content')?.innerHTML) {
-        setTimeout(() => {
-          // Swap payload containers
-          document.querySelector('#main-content').innerHTML = nextDoc.querySelector('#main-content').innerHTML;
-          document.title = nextDoc.title;
-          const currentMenu = document.querySelector('#main-menu');
-          const nextMenu = nextDoc.querySelector('#main-menu');
-          if (currentMenu && nextMenu) {
-            // console.log(currentMenu, nextMenu);
-            currentMenu.innerHTML = nextMenu.innerHTML;
+      const virtualDom = parser.parseFromString(rawHtml, 'text/html');
+      setTimeout(() => {
+        if (virtualDom) {
+          if (virtualDom.title) {
+            document.title = virtualDom.title;
           }
+          metadataSelectors.forEach(selector => {
+            const currentMetaElement = document.head.querySelector(selector);
+            const incomingMetaElement = virtualDom.head.querySelector(selector);
+            if (currentMetaElement && incomingMetaElement) {
+              // Overwrite the existing element with the fresh TYPO3 content directly
+              currentMetaElement.replaceWith(incomingMetaElement.cloneNode(true));
+            } else if (incomingMetaElement) {
+              // If it doesn't exist yet in the current head, inject it
+              document.head.appendChild(incomingMetaElement.cloneNode(true));
+            } else if (currentMetaElement) {
+              // If the new page doesn't have it, drop it
+              currentMetaElement.remove();
+            }
+          });
+          replacementSelectors.forEach(selector => {
+              const currentSection = document.querySelector(selector);
+              const nextSection = virtualDom.querySelector(selector);
+              if (currentSection && nextSection) {
+                // console.log(currentMenu, nextMenu);
+                currentSection.innerHTML = nextSection.innerHTML;
+                document.querySelector(selector).classList.remove('is-switching');
+              }
+          });
           // Update the browser bar history stack smoothly
-          window.history.pushState({ url }, nextDoc.title, url);
+          window.history.pushState({ url }, virtualDom.title, url);
+
           //window.scrollTo(0, 0);
-          mainContent.classList.remove('is-switching');
+
           //rebindMenuListeners();
           // console.log('switch completed.');
-        }, 150);
-      }
+        }
+      }, 150);
     } catch (error) {
       console.warn("SPA loading error, falling back to standard link transition:", error);
       window.location.href = url;
     }
   }
 
-  function manageSiledIns() {
+  function manageSlideIns() {
     const menuWrap = document.querySelector('.menu-wrap');
     if (!menuWrap) return;
     const toggles = document.querySelectorAll('.menu-wrap input[type="checkbox"]');
@@ -116,133 +149,60 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-  manageSiledIns();
+  manageSlideIns();
 
-  const audioPlayer = new AudioPlayer();
+  const audioPlayer = new AudioPlayerApp();
   audioPlayer.setVolume(33);
-  const togglePlayPauseBtn = function () {
-    document.querySelector('#audio-player').classList.toggle('active');
-    if (!audioPlayer.player.paused) {
-      document.querySelector('.btn-toggle-play-pause').title = "Pause";
-    } else {
-      document.querySelector('.btn-toggle-play-pause').title = "Play";
-    }
-  }
-  // console.log(audioPlayer);
+  console.log(audioPlayer);
   audioPlayer.setSrc('/fileadmin/MP3/Phish_Funk--Hold_On.mp3');
   audioPlayer.setNextSrc('/fileadmin/MP3/Phish_Funk--The_Squelch.mp3');
-  document.getElementById('btn-play')?.addEventListener('click', () => audioPlayer.play());
-  document.getElementById('btn-pause')?.addEventListener('click', () => audioPlayer.pause());
-  document.getElementById('btn-toggle-play-pause')?.addEventListener('click', (e) => {
-    if (audioPlayer.player.paused) {
-      if (audioPlayer.player.currentTime) {
-        console.log(`Continuing playback at ${audioPlayer.player.currentTime} / ${audioPlayer.player.duration}s.`);
-      } else {
-        console.log(`Starting playback of ${audioPlayer.player.duration}s.`);
-      }
-    } else {
-      console.log(`Playback paused at ${audioPlayer.player.currentTime} / ${audioPlayer.player.duration}s.`);
-    }
-    audioPlayer.togglePlayPause(1000);
-    togglePlayPauseBtn();
-  });
 
-  document.getElementById('btn-stop')?.addEventListener('click', (e) => {
-    audioPlayer.stop();
-    togglePlayPauseBtn();
-    console.log('Playback stopped.');
-  });
-  document.getElementById('btn-fadeIn')?.addEventListener('click', () => audioPlayer.fadeIn(5000));
-  document.getElementById('btn-fadeOut')?.addEventListener('click', () => audioPlayer.fadeOut(5000));
-  document.getElementById('btn-crossFade')?.addEventListener('click', () => audioPlayer.crossFade(5000));
-  audioPlayer.player.onended = () => {
-    console.log('The song ended.');
-    togglePlayPauseBtn();
-  }
+  (function() {
+    // 🚀 ENVIRONMENT GUARD: Only activate if running locally
+    const isLocalDevelopment =
+      window.location.hostname === 'localhost' ||
+      window.location.hostname === '127.0.0.1' ||
+      window.location.hostname.endsWith('.ddev.site');
 
-  const volumeControl = document.querySelector('.volumeControl');
-  const volumeSlider = document.getElementById('volumeSlider');
-  const volumeTrack = document.getElementById('volumeTrack');
-  const volumeThumb = document.getElementById('volumeThumb');
+    if (!isLocalDevelopment) return;
 
-  function updateVolumeFromSlider(e) {
-    let horizontal = false;
-    let percentage;
-    if (volumeControl.classList.contains('horizontal')) {
-      horizontal = true;
-    }
-    //console.log(e);
-    const rect = volumeSlider.getBoundingClientRect();
-    if (horizontal) {
-      // Calculate horizontal click position relative to the slider width
-      // (0 at left, slider width at right)
-      const clickX = rect.right - e.clientX;
-      percentage = (clickX / rect.width) * 100;
-    } else {
-      // Calculate vertical click position relative to the slider height
-      // (0 at top, slider height at bottom)
-      const clickY = e.clientY - rect.top;
-      percentage = (clickY / rect.height) * 100;
-    }
-    // Clamp percentage between 0 and 100
-    percentage = Math.max(0, Math.min(100, percentage));
-    // Because standard volume scales from bottom (100%) to top (0%),
-    // we invert the percentage for the actual audio volume level.
-    const volumeLevel = 100 - percentage;
-    // Update the Audio class state
-    audioPlayer.setVolume(volumeLevel);
-    // Update ARIA accessibility attributes
-    volumeSlider.setAttribute('aria-valuenow', Math.round(volumeLevel));
-    // Update CSS styles dynamically
-    // Adjusts the linear gradient transition point and the thumb's top placement
-    if (horizontal) {
-      volumeTrack.style.background = `linear-gradient(to left, rgb(102, 102, 102) 0%, rgb(102, 102, 102) ${percentage}%, rgb(30, 144, 255) ${percentage}%, rgb(30, 144, 255) 100%)`;
-      volumeThumb.style.left = `calc(100% - ${percentage}%)`;
-    } else {
-      volumeTrack.style.background = `linear-gradient(rgb(102, 102, 102) 0%, rgb(102, 102, 102) ${percentage}%, rgb(30, 144, 255) ${percentage}%, rgb(30, 144, 255) 100%)`;
-      volumeThumb.style.top = `${percentage}%`;
-    }
-  }
+    // Create the reload button element dynamically
+    const reloadBtn = document.createElement('button');
+    reloadBtn.id = 'dev-content-reload';
+    reloadBtn.textContent = '🔄 Refresh Content';
+    reloadBtn.setAttribute('aria-label', 'Development Content Scoped Reload');
 
-  function updateVolumeSliderFromPlayer(volParam = null) {
-    let horizontal = false;
-    if (volumeControl.classList.contains('horizontal')) {
-      horizontal = true;
-    }
-    const vol = audioPlayer.player.volume;
-    const percentage = (volParam !== null) ? volParam : vol * 100;
-    console.log(volParam, percentage);
-    if (horizontal) {
-      volumeTrack.style.background = `linear-gradient(to right, rgb(30, 144, 255) 0%, rgb(30, 144, 255) ${percentage}%, rgb(102, 102, 102) ${percentage}%, rgb(102, 102, 102) 100%)`;
-      volumeThumb.style.left = `${percentage}%`;
-    } else {
-      volumeTrack.style.background = `linear-gradient(rgb(102, 102, 102) 0%, rgb(102, 102, 102) ${percentage}%, rgb(30, 144, 255) ${percentage}%, rgb(30, 144, 255) 100%)`;
-      volumeThumb.style.top = `${percentage}%`;
-    }
-  }
+    // Apply quick utility styling to pin it visibly out of the way
+    Object.assign(reloadBtn.style, {
+      position: 'fixed',
+      bottom: '20px',
+      left: '20px',
+      zIndex: '99999',
+      backgroundColor: '#ff9500', // Warning orange to stand out as a dev tool
+      color: '#ffffff',
+      border: 'none',
+      borderRadius: '4px',
+      padding: '8px 12px',
+      fontSize: '12px',
+      fontWeight: 'bold',
+      cursor: 'pointer',
+      boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+      transition: 'background-color 0.2s'
+    });
 
-  // Handle drag behavior
-  let isDragging = false;
-  volumeSlider.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    updateVolumeFromSlider(e);
-  });
-  document.body.addEventListener('mousemove', (e) => {
-    if (isDragging) {
-      updateVolumeFromSlider(e);
-    }
-  });
-  document.body.addEventListener('mouseup', (e) => {
-    isDragging = false;
-  });
-  document.getElementById('btn-mute').addEventListener('click', (e) => {
-    document.querySelector('#audio-player').classList.toggle('muted');
-    if (audioPlayer.player.muted) {
-      audioPlayer.player.muted = false;
-      updateVolumeSliderFromPlayer();
+    // Hover effect styling
+    reloadBtn.onmouseover = () => reloadBtn.style.backgroundColor = '#e08200';
+    reloadBtn.onmouseout = () => reloadBtn.style.backgroundColor = '#ff9500';
+
+    reloadBtn.addEventListener('click', async () => {
+      loadSpaPage(window.location.href);
+    });
+
+    if (document.body) {
+      document.body.appendChild(reloadBtn);
     } else {
-      audioPlayer.player.muted = true;
-      updateVolumeSliderFromPlayer(0);
+      window.addEventListener('DOMContentLoaded', () => document.body.appendChild(reloadBtn));
     }
-  });
+  })();
+
 });

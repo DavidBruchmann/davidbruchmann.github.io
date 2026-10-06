@@ -1,83 +1,11 @@
-/*
-.volumeControl {
-  position: relative;
-  display: flex;
-  align-items: center;
-  pointer-events: auto;
+@font-face {
+    font-family: 'Digits Mono';
+    src: url('../Fonts/Digits-Mono.woff2') format('woff2'),
+        url('../Fonts/Digits-Mono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
-
-.volumeSlider {
-  position: relative;
-  top: 100%;
-  left: 50%;
-  transform: rotate(90deg);
-  transform: translateX(-50%);
-  width: 40px;
-  height: 120px;
-  padding: 6px;
-  cursor: pointer;
-  margin-top: 0px;
-  border: 2px solid var(--ifm-color-emphasis-300, #d0d0d0);
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  pointer-events: none;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
-  z-index: 1000;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.volumeSlider:focus-visible {
-  outline: 2px solid #1e90ff;
-  outline-offset: -2px;
-}
-
-.volumeSlider.visible {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.volumeTrack {
-  width: 10px;
-  height: 100%;
-  border: 1px solid var(--ifm-color-emphasis-300, #d0d0d0);
-  border-radius: 4px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.volumeThumb {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
-  border: 2px solid #000;
-  border-radius: 50%;
-  cursor: grab;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.2s;
-}
-
-:root([data-theme='light']) .volumeThumb {
-  background-color: #1e90ff;
-}
-
-:root([data-theme='dark']) .volumeThumb {
-  background-color: #222;
-}
-
-.volumeThumb:hover {
-  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.5);
-}
-*/
-
 .audio-menu {
     overflow: hidden;
 }
@@ -92,6 +20,10 @@
     padding: 0.5em 0;
     overflow: hidden;
 }
+.dynDisplay {
+    display: flex;
+    gap: 2px;
+}
 .displayText {
   display: inline-block;
   width: auto;           /* Let it be as long as it needs to be */
@@ -100,6 +32,41 @@
   white-space: nowrap;
   animation: marquee 15s linear infinite;
   /* Remove any max-width here */
+}
+.times {
+    /* background: black;
+    font-family: 'courier', monospace;
+    border-right: 1px solid var(--text-color-opaque);
+    */
+    vertical-align: text-bottom;
+    font-family: 'Digits Mono';
+    background: black;
+    color: #ff0; /* var(--text-color); */
+    padding: 8px 4px 0 0;
+    font-size: 20px;
+    width: 162px;
+    height: 40px;
+    display: flex;
+}
+.times,
+.progress,
+.duration {
+}
+.progress {
+    padding: 6px 0.25rem;
+    flex: 1;
+    text-align: right;
+}
+.duration {
+    padding: 6px 0.25rem;
+    flex: 1;
+    white-space: nowrap;
+}
+.duration:before {
+    content: " / ";
+}
+.textContainer {
+    flex-grow: 1;
 }
 @media (prefers-reduced-motion: reduce) {
   .displayText {
@@ -129,23 +96,29 @@
 
 .audioPlayer .button-bar {
     display:flex;
-    gap: 1px;
+    gap: 0;
 }
 
 .btn-audiobar {
   width: 40px;
   height: 40px;
   overflow: hidden;
-  border: 2px solid #f00 !important;
+  border: 1px solid var(--text-color-opaque);
+  border-width: 0 0 1px 1px;
+  border-radius: 0;
   line-height: 32px;
   box-sizing: border-box;
   font-size: 36px;
   text-align: center;
   padding: 0 !important;
   margin: 0 !important;
-  border: 0 !important;
-  background: var(--ifm-color-emphasis-100);
+  background: var(--bg-color);
   position: relative;
+}
+
+.btn-audiobar:last-child {
+  border-width: 0 1px 1px 1px;
+  border-radius: 0 0 5px 0;
 }
 
 .btn-audiobar .icon-state-default svg {
@@ -230,9 +203,13 @@
   position: relative;
   display: inline-flex;
   gap: 1px;
-  padding: 0;
+  padding: 0 1rem 0 0;
   justify-content: space-between;
   box-sizing: border-box;
+  border: 1px solid var(--text-color-opaque);
+  border-width: 0 1px 1px 1px;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
 }
 
 .volumeControl .btn-mute {
@@ -242,6 +219,8 @@
     text-align: center;
     overflow: visible;
     line-height: 24px;
+    border: 0;
+    border-radius: 0 0 0 5px;
 }
 .volumeControl .btn-mute svg {
     width: 24px !important;
@@ -282,11 +261,153 @@
   background-color: #ffffff;
   border: 2px solid #1e90ff;
   border-radius: 50%;
-  pointer-events: none; /* Prevents the thumb from hijacking mouse coordinates during drags */
+  /* pointer-events: none; Prevents the thumb from hijacking mouse coordinates during drags */
   cursor: pointer;
 }
 
 .volumeControl.horizontal .volumeThumb {
     left: auto;
     top: calc(50% + 2px);
+}
+
+.progressControl {
+  width: 40px;
+  height: 150px;
+  display: flex;
+  gap: 1px;
+  justify-content: center;
+  align-items: center;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.progressControl.horizontal {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  padding: 0 1rem 0 0;
+  box-sizing: border-box;
+  border: 1px solid var(--text-color-opaque);
+  border-width: 0 1px 1px 0;
+  overflow: hidden;
+  /*
+  border-radius: 0 0 5px 5px;
+  display: inline-flex;
+  gap: 1px;
+  justify-content: space-between;
+  */
+}
+
+.progressSlider {
+  position: relative;
+  width: 10px;
+  height: 100%;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.progressControl.horizontal .progressSlider {
+  width: calc(100% - 163px);
+  height: 10px;
+}
+
+.progressControl.horizontal .progressIndicator {
+  height: 20px;
+  width: 120px;
+  line-height: 20px;
+  font-size: 12px;
+}
+.progressControl.horizontal .progressIndicator label {
+  width: 100%;
+  position; relative;
+  display: inline-block;
+  padding: 0 1em;
+}
+
+.progressControl.horizontal .progressIndicator time {
+  display: inline-block;
+  position; relative;
+  right: 0;
+  text-align: right;
+}
+
+/* The vertical track bar visual */
+.progressTrack {
+  position: absolute;
+  width: calc(100% - 1.2rem);
+  height: 100%;
+  border-radius: 4px;
+  margin: 0 0 0 1.2rem;
+}
+
+/* The moving handle node */
+.progressThumb {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border: 2px solid #1e90ff;
+  border-radius: 50%;
+  /* pointer-events: none; Prevents the thumb from hijacking mouse coordinates during drags */
+  cursor: pointer;
+}
+
+.progressControl.horizontal .progressThumb {
+    left: auto;
+    top: calc(50% + 2px);
+}
+
+.playlistContainer {
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 1rem 0;
+  border-top: 1px solid  var(--text-color);
+}
+
+.playlist-item {
+  border-bottom: 1px solid  var(--text-color);
+  /* cursor: pointer; */
+  font-weight: 600;
+}
+.playlist-item a,
+.playlist-item a:visited {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  color: var(--text-color) !important;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.playlist-item.active-track {
+  background: var(--bg-color-menu);
+}
+
+nav.audio-menu h3 {
+    color: var(--text-color);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+nav.audio-menu h3:before,
+nav.audio-menu h3:after {
+    content: " ";
+    border: 3px solid var(--text-color);
+    border-width: 3px 0;
+    height: 4px;
+    flex-grow: 1;
+}
+
+nav.audio-menu h3:before {
+    left: -0.5rem;
+}
+
+nav.audio-menu h3:after {
+    left: 0.5rem;
 }

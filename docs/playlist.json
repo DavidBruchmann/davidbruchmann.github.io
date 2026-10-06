@@ -1,0 +1,114 @@
+[
+    {
+        "index": "1",
+        "file": {
+            "properties": {
+                "title": "Aquarius (Psychadelik Pedestrian remix)",
+                "name": "Phish_Funk--Aquarius_(Psychadelik_Pedestrian_remix)",
+                "duration": {
+                    "formated": "6:22",
+                    "seconds": "382.044781"
+                }
+            },
+            "publicUrl": "/fileadmin/MP3/Phish_Funk/Best_Bytes_Volume_1/Phish_Funk--Aquarius_(Psychadelik_Pedestrian_remix).mp3"
+        }
+    },
+    {
+        "index": "2",
+        "file": {
+            "properties": {
+                "title": "Phish Funk--The Squelch",
+                "name": "Phish_Funk--The_Squelch",
+                "duration": {
+                    "formated": "5:01",
+                    "seconds": "301.248031"
+                }
+            },
+            "publicUrl": "/fileadmin/MP3/Phish_Funk/Best_Bytes_Volume_1/Phish_Funk--The_Squelch.mp3"
+        }
+    },
+    {
+        "index": "3",
+        "file": {
+            "properties": {
+                "title": "Phish Funk--Stargazing",
+                "name": "Phish_Funk--Stargazing",
+                "duration": {
+                    "formated": "6:55",
+                    "seconds": "415.246406"
+                }
+            },
+            "publicUrl": "/fileadmin/MP3/Phish_Funk/Best_Bytes_Volume_2/Phish_Funk--Stargazing.mp3"
+        }
+    },
+    {
+        "index": "4",
+        "file": {
+            "properties": {
+                "title": "Phish Funk--Lava Lamp (Blastculture 3:28AM remix)",
+                "name": "Phish_Funk--Lava_Lamp_(Blastculture_3_28AM_remix)",
+                "duration": {
+                    "formated": "4:12",
+                    "seconds": "252.499563"
+                }
+            },
+            "publicUrl": "/fileadmin/MP3/Phish_Funk/Best_Bytes_Volume_3/Phish_Funk--Lava_Lamp_(Blastculture_3_28AM_remix).mp3"
+        }
+    },
+    {
+        "index": "5",
+        "file": {
+            "properties": {
+                "title": "Psychadelik Pedestrian--Against The Grain (Phish Funk remix)",
+                "name": "Psychadelik_Pedestrian--Against_The_Grain_(Phish_Funk_remix)",
+                "duration": {
+                    "formated": "3:38",
+                    "seconds": "218.488125"
+                }
+            },
+            "publicUrl": "/fileadmin/MP3/Phish_Funk/Best_Bytes_Volume_3/Psychadelik_Pedestrian--Against_The_Grain_(Phish_Funk_remix).mp3"
+        }
+    },
+    {
+        "index": "6",
+        "file": {
+            "properties": {
+                "title": "Phish Funk--Beautiful Geometry",
+                "name": "Phish_Funk--Beautiful_Geometry",
+                "duration": {
+                    "formated": "5:37",
+                    "seconds": "336.981882"
+                }
+            },
+            "publicUrl": "/fileadmin/MP3/Phish_Funk/Best_Bytes_Volume_4/Phish_Funk--Beautiful_Geometry.mp3"
+        }
+    },
+    {
+        "index": "7",
+        "file": {
+            "properties": {
+                "title": "Phish Funk--Hold On",
+                "name": "Phish_Funk--Hold_On",
+                "duration": {
+                    "formated": "3:48",
+                    "seconds": "228.92331"
+                }
+            },
+            "publicUrl": "/fileadmin/MP3/Phish_Funk/Best_Bytes_Volume_4/Phish_Funk--Hold_On.mp3"
+        }
+    },
+    {
+        "index": "8",
+        "file": {
+            "properties": {
+                "title": "Phish Funk--Strum (Capture My Heart)",
+                "name": "Phish_Funk--Strum_(Capture_My_Heart)",
+                "duration": {
+                    "formated": "4:04",
+                    "seconds": "244.56068"
+                }
+            },
+            "publicUrl": "/fileadmin/MP3/Phish_Funk/Best_Bytes_Volume_4/Phish_Funk--Strum_(Capture_My_Heart).mp3"
+        }
+    }
+]

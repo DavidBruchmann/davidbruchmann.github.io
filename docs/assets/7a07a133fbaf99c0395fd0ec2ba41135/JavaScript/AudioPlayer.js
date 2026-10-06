@@ -4,10 +4,10 @@ class AudioPlayer {
     this.player = new Audio();
     this.debug = false;
     this.volume = 33;
+    this.progress = 0;
     this.targetVolume = this.volume;
     this.player.volume = this.volume / 100;
     this.src = '';
-    this.nextSrc = '';
   }
 
   setSrc(src) {
@@ -15,33 +15,29 @@ class AudioPlayer {
     this.player.src = this.src;
   }
 
-  setNextSrc(nextSrc) {
-    this.nextSrc = nextSrc; //'fileadmin/MP3/Phish_Funk--Hold_On.mp3';
-  }
-
   play() {
-    this.player.play();
-    if (this.debug !== false) console.log('player.paused', this.player.paused);
-    console.log('player', this.player);
+    if (this.player.paused) {
+      this.player.play();
+      return true;
+    }
+    return false;
   }
 
   pause() {
-    this.player.pause();
-    if (this.debug !== false) console.log('player.paused', this.player.paused);
+    if (!this.player.paused) {
+      this.player.pause();
+      return true;
+    }
+    return false;
   }
 
   stop() {
-    this.player.pause();
-    // this.player.fastSeek(0); // fastSeek is not universally supported; currentTime is safer
     this.player.currentTime = 0;
-
-    if (this.debug !== false) {
-      console.log({
-        'paused': this.player.paused,
-        'ended': this.player.ended,
-        'played': this.player.played
-      });
+    if (!this.player.paused) {
+      this.player.pause();
+      return true;
     }
+    return false;
   }
 
   togglePlayPause(ms = 0) {
@@ -86,6 +82,32 @@ class AudioPlayer {
     this.player.volume = realVolume;
   }
 
+  setProgress(percentage) {
+    if (this.progress === percentage) {
+      return;
+    }
+    if (percentage >= -100 && percentage <= 100) {
+      this.progress = percentage;
+    } else {
+      console.warn('Progress has to be between -100 and 100.');
+      return;
+    }
+    let realPercentage = 0;
+    if (percentage < 0) {
+      this.progress = this.progress - percentage;
+      if (this.progress <= 0) {
+        this.progress = 0;
+        realPercentage = 0;
+      } else {
+        realPercentage = this.progress;
+      }
+    } else {
+      realPercentage = this.progress;
+    }
+    const progress =  this.player.duration / 100 * realPercentage;
+    this.player.currentTime = progress;
+  }
+
   /**
    * fadeIn() and fadeOut() currently are very simple, they in-/decrease
    * the volume linear and calculation is done on the volume itself,
@@ -126,13 +148,15 @@ class AudioPlayer {
         }
         return Promise.resolve().then(nextPromise).finally(() => {
           let waitingDuration = (count + 2) * step;
-          window.setTimeout(console.log('Maximum sound volume reached (current user setting: ' + targetVolume + '%).'), waitingDuration);
+          const displayValue = Math.round(targetVolume * 10) / 10;
+          window.setTimeout(console.log('Sound volume of ' + displayValue + '%) reached.'), waitingDuration);
         });
       }
       // increaseVolumeIterator(this.volume, 'increaseVolumeCallback', this, step, this.targetVolume);
 
         this.play();
-        console.log(`Fading in from 0% to ${this.targetVolume}% sound-volume.`);
+        const displayValue = Math.round(this.targetVolume * 10) / 10;
+        console.log(`Fading in from 0% to ${displayValue}% sound-volume.`);
         increaseVolumeIterator(this.volume, 'increaseVolumeCallback', this, step, this.targetVolume);
       /*
       if (!this.player.paused) {
@@ -216,36 +240,5 @@ class AudioPlayer {
     } else {
       this.pause();
     }
-  }
-
-  crossFade(ms) {
-    /*
-    const nextPlayer = new AudioPlayer;
-    nextPlayer.setSrc(this.nextSrc);
-    if (ms && ms > 0) {
-      let step;
-      if (this.volume > 0) {
-        step = ms / this.volume;
-        this.targetVolume = this.volume;
-      } else if (this.targetVolume > 0) {
-        step = ms / this.targetVolume;
-      }
-      const steps = ms / step;
-      let inverseCount = steps;
-      nextPlayer.setVolume(0);
-      nextPlayer.play();
-      for (let i = 1; 1 <= steps; i++) {
-        inverseCount = steps - i;
-        window.setTimeout(() => {
-          this.setVolume(inverseCount);
-          nextPlayer.setVolume(i);
-        }, step);
-      }
-    } else {
-      //nextPlayer.setVolume(0);
-      nextPlayer.play();
-    }
-    this.stop();
-    */
   }
 }

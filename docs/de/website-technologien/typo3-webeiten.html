@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8">
+
+<!-- 
+	The website is created and maintained by David Bruchmann, Webdevelopment Barlian, david.bruchmann@gmail.com.
+
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2026 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+
+<link rel="icon" href="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/favicon.ico" type="image/vnd.microsoft.icon">
+<title>TYPO3 Webeiten: David Bruchmann • Web-Development</title>
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="generator" content="TYPO3 CMS">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="apple-mobile-web-app-capable" content="no">
+
+
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css" media="all">
+<link rel="stylesheet" href="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/layout.css" media="all">
+<link rel="stylesheet" href="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/AudioPlayer.css" media="all">
+<link href="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/main.css" rel="stylesheet" >
+
+
+<script src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/AudioPlayer.js"></script>
+
+
+
+<link rel="canonical" href="https://davidbruchmann.github.io/de/website-technologien/typo3-webeiten.html">
+
+<link rel="alternate" hreflang="en-US" href="https://davidbruchmann.github.io/en/website-technologies/typo3-webites.html">
+<link rel="alternate" hreflang="de-DE" href="https://davidbruchmann.github.io/de/website-technologien/typo3-webeiten.html">
+<link rel="alternate" hreflang="x-default" href="https://davidbruchmann.github.io/en/website-technologies/typo3-webites.html">
+
+</head>
+<body>
+
+
+<header>
+  <div class="scroll-progress scroll-progress-bar scroll-progress-bar-current" aria-hidden="true">
+    <div class="content-default">
+      <div>
+        <img class="logo logo-bw" title="David Bruchmann • Web-Development" alt="logo" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Images/Logo_DB-black.svg" width="140" height="40" />
+        <span class="md">David Bruchmann<br><span class="upper">Web-Development</span></span>
+      </div>
+      <div class="menu-wrap">
+        <div><label for="language-toggle" class="language-btn" title="Language Menu">
+   
+    
+        
+    
+        
+            <span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
+	<span class="icon-markup">
+<img src="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
+	</span>
+	
+</span>
+            <!--<img title="Deutsch" alt="Deutsch" class="flag" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="40" height="24" />-->
+        
+    
+</label></div>
+        <div><label for="appearance-toggle" class="appearance-btn" title="Appearance Toggle"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
+	</span>
+	
+</span></label></div>
+        
+            <div><label for="audio-toggle" class="audio-btn" title="Audio Player" style="filter: saturate(0%) brightness(200%); "><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-music" data-identifier="actions-music" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-music" /></svg>
+	</span>
+	
+</span></label></div>
+        
+        <div>
+            <label for="menu-toggle" class="hamburger-btn" title="Page Menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-progress scroll-progress-bar-remaining">
+    <div class="content" aria-hidden="true">
+      <div>
+        <img class="logo" title="David Bruchmann • Web-Development" alt="logo" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Images/Logo_DB-black.svg" width="140" height="40" />
+        <span class="md">David Bruchmann<br><span class="upper">Web-Development</span></span>
+      </div>
+      <div class="menu-wrap">
+        <div><label for="language-toggle" class="language-btn" title="Language Menu">
+   
+    
+        
+    
+        
+            <span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
+	<span class="icon-markup">
+<img src="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
+	</span>
+	
+</span>
+            <!--<img title="Deutsch" alt="Deutsch" class="flag" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="40" height="24" />-->
+        
+    
+</label></div>
+        <div><label for="appearance-toggle" class="appearance-btn" title="Appearance Toggle"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
+	</span>
+	
+</span></label></div>
+        
+            <div><label for="audio-toggle" class="audio-btn" title="Audio Player" style="filter: saturate(0%) brightness(0%)"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-music" data-identifier="actions-music" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-music" /></svg>
+	</span>
+	
+</span></label></div>
+        
+        <div>
+            <label for="menu-toggle" class="hamburger-btn" title="Page Menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-progress scroll-progress-bar-overlay menu-outer-wrap">
+
+    <div class="content">
+      <div>
+        <a href="/de/" class="root-link"><img class="logo" title="David Bruchmann • Web-Development" alt="logo" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Images/Logo_DB-transparent.svg" width="140" height="40" /></a>
+        <a href="/de/" class="root-link"><span class="md">David Bruchmann<br><span class="upper">Web-Development</span></span></a>
+      </div>
+      <div class="menu-wrap">
+
+        <div>
+          <input type="checkbox" id="language-toggle" class="language-toggle menu-toggle">
+          <label for="language-toggle" class="language-btn" title="Language Menu">
+   
+    
+        
+    
+        
+            <span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
+	<span class="icon-markup">
+<img src="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
+	</span>
+	
+</span>
+            <!--<img title="Deutsch" alt="Deutsch" class="flag" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="40" height="24" />-->
+        
+    
+</label>
+          <nav class="language-menu">
+            
+   
+   
+   
+      <ul>
+         
+            <li class="
+                    ">
+               
+                     <a href="/en/website-technologies/typo3-webites.html" hreflang="en-US" class="lang-link">
+                        <span class="flag-icon"><span title="English" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-gb" data-identifier="flags-gb" aria-hidden="true">
+	<span class="icon-markup">
+<img src="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/gb.webp" width="32" height="32" alt="" />
+	</span>
+	
+</span><!--<img title="English" alt="English" class="flag" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/gb.svg" width="30" height="15" />--></span>
+                        <span>English</span>
+                     </a>
+                  
+            </li>
+         
+            <li class="active
+                    ">
+               
+                     <a href="/de/website-technologien/typo3-webeiten.html" hreflang="de-DE" class="lang-link">
+                        <span class="flag-icon"><span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
+	<span class="icon-markup">
+<img src="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
+	</span>
+	
+</span><!--<img title="Deutsch" alt="Deutsch" class="flag" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="30" height="18" />--></span>
+                        <span>Deutsch</span>
+                     </a>
+                  
+            </li>
+         
+      </ul>
+   
+
+          </nav>
+        </div>
+
+        <div>
+          <input type="checkbox" id="appearance-toggle" class="appearance-toggle menu-toggle">
+          <label for="appearance-toggle" class="appearance-btn" title="Appearance Toggle"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
+	</span>
+	
+</span></label>
+          <nav class="appearance-menu">
+            <select name="appearance" size="3">
+              <option value="system"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
+	</span>
+	
+</span> System</option>
+              <option value="light"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-brightness-high" data-identifier="actions-brightness-high" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-brightness-high" /></svg>
+	</span>
+	
+</span> Light mode</option>
+              <option value="dark"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-moon" data-identifier="actions-moon" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-moon" /></svg>
+	</span>
+	
+</span> Dark mode</option>
+            </select>
+          </nav>
+        </div>
+
+        <!--
+            <div id="audio-player" class="audio-player">
+              <input type="checkbox" id="audio-toggle" class="audio-toggle menu-toggle">
+              <div class="audio-toggle-container">
+                < ! -- Main 40px Icon Trigger Button -- >
+                <button id="btn-toggle-flyout" class="flyout-trigger" aria-label="Toggle audio player panel">
+                  <label for="audio-toggle" class="audio-btn" title="Audio Player">🎵</label>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3v18l-6-6H2V9h4l6-6zm4.5 9c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                  </svg>
+                </button>
+              </div>
+        -->
+        
+            <div id="audio-player" class="audio-player">
+              <input type="checkbox" id="audio-toggle" class="audio-toggle menu-toggle">
+              <label for="audio-toggle" class="audio-btn" title="Audio Player"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-music" data-identifier="actions-music" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-music" /></svg>
+	</span>
+	
+</span></label>
+                  <!--<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3v18l-6-6H2V9h4l6-6zm4.5 9c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                  </svg>-->
+              <nav class="audio-menu">
+                <!--<div style="width:120px;height:60px;background:var(--bg-color);margin:1rem;">AUDIO</div>-->
+                <div class="playerWrapper" aria-label="Audio player">
+                    <div class="textContainer">
+                      <div class="displayText" aria-live="polite" aria-label="Now playing: Phish Funk [Best Bytes Volume 4] Phish Funk – Hold On">Phish Funk [Best Bytes Volume 4] Phish Funk – Hold On</div>
+                    </div>
+
+                    <div class="progressControl horizontal">
+                    <div class="times">
+                      <time id="progressElm" class="progress">0:00</time>
+                      <time id="durationElm" class="duration">6:22</time>
+                    </div>
+                      <div id="progressSlider" class="progressSlider" role="slider" aria-label="Progress control" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" tabindex="0">
+                        <div id="progressTrack" class="progressTrack" style="background: linear-gradient(to left, rgb(102, 102, 102) 0%, rgb(102, 102, 102) 100%, rgb(30, 144, 255) 100%, rgb(30, 144, 255) 100%);">
+                          <div id="progressThumb" class="progressThumb" style="left: 0%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--
+                    <div class="progressControl horizontal">
+                      <div>
+                          <div id="progressCurrent" class="progressIndicator progressCurrent"><label>Played: <time></time></label></div>
+                          <div id="progressRemaining" class="progressIndicator progressRemaining"><label>Remaining: <time></time></label></div>
+                      </div>
+                      <div id="progressSlider" class="progressSlider" role="slider" aria-label="Progress control" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" tabindex="0">
+                        <div id="progressTrack" class="progressTrack" style="background: linear-gradient(to left, rgb(102, 102, 102) 0%, rgb(102, 102, 102) 100%, rgb(30, 144, 255) 100%, rgb(30, 144, 255) 100%);">
+                          <div id="progressThumb" class="progressThumb" style="left: 0%;"></div>
+                        </div>
+                      </div>
+                      <div id="progressDuration" class="progressIndicator progressDuration"><label>Length: <time></time></label></div>
+                    </div>
+                    -->
+                  <div class="audioPlayer">
+
+                    <div class="button-bar">
+                      <button id="btn-prev" class="btn-audiobar btn-prev" title="Previous (arrow keys to navigate)" aria-label="Previous track" tabindex="0"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-chevron-double-start icon-bidi" data-identifier="actions-chevron-double-start" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-chevron-double-start" /></svg>
+	</span>
+	
+</span></button>
+                      <button id="btn-toggle-play-pause" class="btn-audiobar btn-toggle-play-pause" title="Play" aria-label="Play" tabindex="-1"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-play" data-identifier="actions-play" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-play" /></svg>
+	</span>
+	
+</span><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-pause" data-identifier="actions-pause" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-pause" /></svg>
+	</span>
+	
+</span></button>
+                      <button id="btn-stop" class="btn-audiobar btn-stop" title="Stop" aria-label="Stop"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-square" data-identifier="actions-square" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-square" /></svg>
+	</span>
+	
+</span></button>
+                      <button id="btn-next" class="btn-audiobar btn-next" title="Next" aria-label="Next track" tabindex="-1"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-chevron-double-end icon-bidi" data-identifier="actions-chevron-double-end" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-chevron-double-end" /></svg>
+	</span>
+	
+</span></button>
+                    </div>
+                      <!--
+                      <button id="btn-fadeIn" class="btn-audiobar">fade in</button>
+                      <button id="btn-fadeOut" class="btn-audiobar">fade out</button>
+                      <button id="btn-crossFade">Cross-fade</button>
+                      <button class="btn-audio btn-audio-shuffle" title="Shuffle: off (arrow keys to navigate)" aria-label="Shuffle: off" tabindex="-1">Shuffle</button>
+                      <div class="shuffleMenu">
+                        <div class="shuffleMenuOption selected focused" role="button" tabindex="0">Off</div>
+                        <div class="shuffleMenuOption" role="button" tabindex="0">All</div>
+                        <div class="shuffleMenuOption" role="button" tabindex="0">Album</div>
+                        <div class="shuffleMenuOption" role="button" tabindex="0">Artist</div>
+                      </div>
+                      -->
+                    <div class="volumeControl horizontal">
+                      <button id="btn-mute" class="btn-audiobar btn-mute" title="Mute" aria-label="Mute" tabindex="-1"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-bullhorn" data-identifier="actions-bullhorn" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-bullhorn" /></svg>
+	</span>
+	
+</span><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-bullhorn-slash" data-identifier="actions-bullhorn-slash" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-bullhorn-slash" /></svg>
+	</span>
+	
+</span></button>
+                      <div id="volumeSlider" class="volumeSlider" role="slider" aria-label="Volume control" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100" tabindex="0">
+                        <div id="volumeTrack" class="volumeTrack" style="background: linear-gradient(to left, rgb(102, 102, 102) 0%, rgb(102, 102, 102) 74.1667%, rgb(30, 144, 255) 74.1667%, rgb(30, 144, 255) 100%);">
+                          <div id="volumeThumb" class="volumeThumb" style="left: 33%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3>Playlist</h3>
+                  <div id="playlist-container" class="playlistContainer" aria-label="Audio Track Playlist"></div>
+                </div>
+              </nav>
+            </div>
+        
+
+        <div>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle">
+          <label for="menu-toggle" class="hamburger-btn" title="Page Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
+          <nav class="menu" id="main-menu">
+            <!-- <div class="jugendstil-flyout-profile"></div> -->
+            
+<ul>
+    <li class="">
+        <a href="/de/" target="">
+            Startseite
+        </a>
+    </li>
+    
+        <li class="">
+            <a href="/de/konzept-und-design-dieser-webseite.html" target="">
+                Konzept und Design dieser Webseite
+            </a>
+            
+        </li>
+    
+        <li class="">
+            <a href="/de/open-source.html" target="">
+                Open Source
+            </a>
+            
+        </li>
+    
+        <li class="active">
+            <a href="/de/website-technologien.html" target="">
+                Website-Technologien
+            </a>
+            
+                <ul>
+                    
+                        <li class="active current">
+                            <a href="/de/website-technologien/typo3-webeiten.html" target="">
+                                TYPO3 Webeiten
+                            </a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="/de/website-technologien/translate-to-german-spa.html" target="">
+                                SPA
+                            </a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="/de/website-technologien/statische-webseiten.html" target="">
+                                Statische Webseiten
+                            </a>
+                        </li>
+                    
+                </ul>
+            
+        </li>
+    
+</ul>
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main id="main-content">
+<!-- 2. The SPA Content Container (Swapped out by main.js) -->
+  
+    <div class="row">
+        
+    
+    
+
+            <div id="c52" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                TYPO3 als vielseitiges Enterprise-System für dynamische Websites
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c53" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Dynamik auf Unternehmensniveau – ausgelegt auf Skalierbarkeit
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Wenn ein digitales Projekt komplexe Zugriffsberechtigungen, Echtzeit-Datenberechnungen, automatisierte kanalübergreifende Inhaltsverknüpfungen oder tiefgreifende Backend-Erweiterungen erfordert, stoßen statische Systeme an ihre Grenzen. Hier erweist sich TYPO3 als überlegener Enterprise-Standard.</p>
+<p>Im Gegensatz zu einfachen Layout-Tools oder statischen Generatoren fungiert TYPO3 als voll dynamische Webanwendung. Das System verarbeitet Inhalte, Zugriffsberechtigungen und Datenbankstrukturen in Echtzeit und liefert so maßgeschneiderte digitale Erlebnisse für spezifische Nutzergruppen. Diese Leistungsfähigkeit verlagert jedoch den technischen Schwerpunkt: Während eine statische Website keinerlei Wartung im Live-Betrieb erfordert, verlangt eine aktive, leistungsstarke TYPO3-Instanz nach einer sorgfältigen Infrastruktursteuerung, einer präzisen Abbildung von Abhängigkeiten sowie einer professionellen Systemwartung.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c54" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Kerndimensionen dynamischer Überlegenheit
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <h3>1. Architektur für Multi-Site-Isolation und echte Lokalisierung</h3>
+<p>TYPO3 wurde von Grund auf so konzipiert, dass es riesige, mandantenfähige Unternehmensstrukturen innerhalb eines einzigen Installationskerns verwalten kann.</p><ul style="margin-left:0px;"><li style="margin-left:0px;" data-list-item-id="e2fc6bebd63ff4d8b998758416eb590c8"><strong>Der dynamische Vorteil:</strong> Eine einzige TYPO3-Datenbankinstanz kann Dutzende völlig unabhängiger Domains, Microsites und Landingpages gleichzeitig betreiben. Im Gegensatz zu statischen Umgebungen, in denen jede Sprachvariante einen eigenen kompilierten Verzeichnis-Stream erfordert, bewältigt TYPO3 komplexe Workflows für mehrsprachige Übersetzungsmatrizen auf dynamische Weise. Das System löst Fallback-Sprachen auf, wechselt lokalisierte Inhaltselemente und verarbeitet regionale Routing-Parameter in Echtzeit basierend auf direkten Benutzeranfragen.</li></ul><h3>2. Granulare Zugriffssteuerung &amp; Content-Personalisierung</h3>
+<p>Dynamische Systeme spielen ihre Stärken aus, wenn Inhalte geschützt, angepasst oder auf der Grundlage einer Echtzeit-Authentifizierung eingeschränkt werden müssen.</p><ul style="margin-left:0px;"><li style="margin-left:0px;" data-list-item-id="e0cd5a23f0fde374795b2da14614b66c2"><strong>Der dynamische Vorteil:</strong> TYPO3 verfügt über ein hochentwickeltes, granulares System zur Zugriffssteuerung für Benutzergruppen im Backend und Frontend. Administratoren können spezifische Arbeitsbereiche, Seiten, Inhaltsblöcke oder Erweiterungsmodule bis hinunter auf die Ebene präziser Benutzerrollen einschränken. Die Live-Engine prüft diese Datenbankbeziehungen bei jeder einzelnen Seitenanfrage und stellt personalisierte Portale, Intranet-Portale sowie maßgeschneiderte Kundenbereiche bereit – Funktionen, die statische Architekturen ohne umfangreiche Abhängigkeiten von externen APIs schlichtweg nicht sicher abbilden können.</li></ul><h3>3. Echtzeit-Verarbeitung von Erweiterungen &amp; Datenbanklogik</h3>
+<p>Wenn ein Projekt Benutzereingaben, Suchfilter, die Verarbeitung von Formulardaten oder die Abwicklung transaktionsbasierter Daten erfordert, ist die serverseitige Code-Ausführung unerlässlich.</p><ul style="margin-left:0px;"><li style="margin-left:0px;" data-list-item-id="e6d6cf1a23202d48d1aba8fac69254c51"><strong>Der dynamische Vorteil:</strong> Dank seines zentralen MVC-Frameworks (Extbase) und der Template-Engine (Fluid) fungiert TYPO3 als aktives Anwendungs-Framework. Eine Extension kann Variablen berechnen, externe Datenbanken abfragen, Live-Produktlisten abrufen oder Benutzeranfragen in Echtzeit steuern – ganz ohne vorherige Generierung oder Speicherung der Inhalte. Während beispielsweise eine statische Website sämtliche Medien-Playlists vorab kompilieren muss, kann eine dynamische TYPO3-Extension Playlist-Varianten direkt auf Basis der Benutzerpräferenzen in Echtzeit („on the fly“) erstellen.</li></ul>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c55" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Die Realität von Infrastruktur und Wartung
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Die enorme Leistungsfähigkeit einer dynamischen Live-TYPO3-Anwendung schafft ein äußerst anspruchsvolles Betriebsumfeld. Da es sich um ein aktives, serverseitiges System handelt, das mit einer relationalen Live-Datenbank verbunden ist, sind kontinuierliche technische Expertise und Wartung erforderlich, um Spitzenleistung und absolute Sicherheit zu gewährleisten:</p><ul style="margin-left:0px;"><li style="margin-left:0px;" data-list-item-id="eb59d8e8d23ee5dabf015cd93db8f11b5"><strong>Strenge Kontrolle des Versionslebenszyklus:</strong> Für den TYPO3-Kern werden regelmäßig Sicherheits-Patches, Minor-Upgrades und große Long-Term-Support-Versionen (LTS) veröffentlicht. Das Auslassen dieser Updates lässt Sicherheitslücken in der Datenbank offen. Ein professioneller Wartungsprozess erfordert die ständige Überwachung dieser Release-Zyklen, um Patches zügig einzuspielen, bevor Bedrohungen tatsächlich eintreten.</li><li style="margin-left:0px;" data-list-item-id="e6f2ad92328fc4ec14512cb57389f2640"><strong>Composer-Abhängigkeitsmanagement:</strong> Moderne TYPO3-Systeme setzen vollständig auf Composer, um individuelle Code-Erweiterungen mit dem Kernsystem zu verknüpfen. Die Aktualisierung einer Erweiterung erfordert ein präzises Verständnis der Abhängigkeitsstrukturen; ein ungeprüftes Paket-Update kann sofort zu einer inkompatiblen Änderung führen, die das aktive Frontend zum Absturz bringt.</li><li style="margin-left:0px;" data-list-item-id="e39b188aa7a3748883ea9b082adc202f5"><strong>Optimierung der Server-Laufzeitumgebung:</strong> Da TYPO3 bei jeder Anfrage ohne Cache-Treffer Lese-/Schreibvorgänge in der Datenbank sowie PHP-Verarbeitungsprozesse durchführt, sind ausgefeilte Caching-Architekturen (wie das TYPO3 Caching Framework, Redis oder Varnish) und eine leistungsstarke Server-Konfiguration erforderlich, um erstklassige Ladezeiten zu gewährleisten.</li></ul>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c56" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Das Ökosystem ausbalancieren: Die DevOps-Brücke
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Um ein leistungsstarkes TYPO3-Live-System sicher zu betreiben und Ausfallzeiten bei Updates zu vermeiden, muss der Entwicklungsprozess von der Produktionsumgebung entkoppelt sein:</p><ol style="margin-left:0px;"><li style="margin-left:0px;" data-list-item-id="e2d6a6049789e5d4e1e4e59ffee3a5907"><strong>Lokale Isolation (Docker &amp; DDEV):</strong> Wir spiegeln die gesamte Konfiguration des Produktionsservers lokal in isolierten Container-Umgebungen. Dies stellt sicher, dass größere Core-Upgrades, Extension-Updates und Datenbankmigrationen auf einem lokalen System gründlich durchgeführt und verifiziert werden, bevor sie auf das öffentliche Zielsystem übertragen werden.</li><li style="margin-left:0px;" data-list-item-id="ea6ae00d9e7e37f1752a9427d4accf029"><strong>Automatisierte Continuous Integration:</strong> Bevor Updates in die Live-Umgebung überführt werden, durchlaufen sie automatisierte Test-Workflows mittels GitHub Actions. Das System prüft automatisch die Code-Konformität, führt strukturelle Build-Tests durch und stellt sicher, dass Abhängigkeiten fehlerfrei aufgelöst werden.</li><li style="margin-left:0px;" data-list-item-id="e2f40900cde027c99e08baac5b931dd3f"><strong>Deployment-Routinen:</strong> Sobald der Code die Verifizierung bestanden hat, überträgt ein Zero-Downtime-Deployment-Skript die Änderungen in die Live-Architektur. So bleibt Ihre dynamische Anwendung sicher, stabil und für Ihre aktiven Nutzer ohne jegliche Unterbrechung verfügbar.</li></ol>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c57" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Der Standard für den öffentlichen Sektor: Der Government Site Builder
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Wenn öffentliche Verwaltungen und Bundesbehörden ihre digitalen Infrastrukturen skalieren, sind Systemausfälle, Sicherheitslücken oder die Nichteinhaltung von Barrierefreiheitsstandards keine Option. Aufgrund dieses extremen Anspruchs an absolute Zuverlässigkeit dient <strong>TYPO3 als technologische Basis für das Framework „Government Site Builder“ (GSB 11)</strong> der deutschen Bundesverwaltung.</p><ul style="margin-left:0px;"><li style="margin-left:0px;" data-list-item-id="eb7df4d5d2a382a225a38ea6bcfaa8f4d"><strong>Die Enterprise-Basis:</strong> Der öffentliche Sektor setzt auf TYPO3, da dessen Architektur die strengen Compliance-Vorgaben von Bundesbehörden perfekt erfüllt. Dank der nativen, äußerst robusten Multi-Site-Trennung kann eine einzelne Behörde Hunderte dezentraler kommunaler Portale, Websites von Bundesministerien und Service-Plattformen über ein zentral verwaltetes, hochsicheres Systempaket steuern.</li><li style="margin-left:0px;" data-list-item-id="eaf5babf1bc755e180482db866151176c"><strong>Compliance und Barrierefreiheit durch Systemdesign:</strong> Über die reine Multi-Site-Verwaltung hinaus bewältigt die strikte Trennung von Ausgabe und Inhalt in TYPO3 mühelos komplexe semantische Anforderungen. Das System stellt sicher, dass Enterprise-Layouts nativ die strengen Richtlinien zur Barrierefreiheit (wie WCAG und BITV) erfüllen und gleichzeitig die volle Datensouveränität gewahrt bleibt. Durch die Trennung der öffentlichen Ausgabekanäle von den administrativen Redaktionsbereichen schafft TYPO3 ein hochresilientes, geprüftes Ökosystem, das selbst bei extremem Besucheraufkommen und koordinierten Sicherheitsangriffen auf nationaler Ebene standhält.</li></ul>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+
+    </div>
+
+  
+</main>
+<footer>
+    <div class="row">
+      <address class="address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <p><span itemprop="name">Webdevelopment Barlian</span><br>
+        <span itemprop="owner">David Bruchmann</span></p>
+
+        <p>
+        <span itemprop="streetAddress">Jalan Pasundan 118</span><br>
+        <span itemprop="addressLocality">Bandung</span> <span itemprop="postalCode">40252</span>
+        </p>
+
+        <p><span itemprop="addressRegion">West Java</span><br>
+        <span itemprop="addressCountry">Indonesia</span>
+        </p>
+
+        <p>Github:  <a href="https://github.com/DavidBruchmann" target="_blank">github.com/DavidBruchmann</a><br>
+        Mail:  <span itemprop="email"><a href="mailto:david.bruchmann@gmail.com" target="_blank">david.bruchmann@gmail.com</a></span>
+        </p>
+      </address>
+      <div class="copyright">&copy; 2026 David Bruchmann</div>
+    </div>
+</footer>
+
+    <!-- 3. The Persistent Media Player (Never Interrupts) -->
+    <!-- <div class="media-player-dock">
+        <audio id="global-player" src="/path-to-stream.mp3" controls></audio>
+    </div> -->
+  </div>
+
+<script>
+
+
+</script>
+
+<script src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/main.js"></script>
+<script src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/AudioPlayerApp.js"></script>
+<script src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/appearance-toogle.js"></script>
+
+
+</body>
+</html>

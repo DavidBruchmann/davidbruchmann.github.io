@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8">
+
+<!-- 
+	The website is created and maintained by David Bruchmann, Webdevelopment Barlian, david.bruchmann@gmail.com.
+
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2026 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+
+<link rel="icon" href="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/favicon.ico" type="image/vnd.microsoft.icon">
+<title>Konzept und Design dieser Webseite: David Bruchmann • Web-Development</title>
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="generator" content="TYPO3 CMS">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="apple-mobile-web-app-capable" content="no">
+
+
+<link rel="stylesheet" href="/typo3temp/assets/css/7015c8c4ac5ff815b57530b221005fc6.css" media="all">
+<link rel="stylesheet" href="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/layout.css" media="all">
+<link rel="stylesheet" href="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/AudioPlayer.css" media="all">
+<link href="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Css/main.css" rel="stylesheet" >
+
+
+<script src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/AudioPlayer.js"></script>
+
+
+
+<link rel="canonical" href="https://davidbruchmann.github.io/de/konzept-und-design-dieser-webseite.html">
+
+<link rel="alternate" hreflang="en-US" href="https://davidbruchmann.github.io/en/this-site-concept-and-design.html">
+<link rel="alternate" hreflang="de-DE" href="https://davidbruchmann.github.io/de/konzept-und-design-dieser-webseite.html">
+<link rel="alternate" hreflang="x-default" href="https://davidbruchmann.github.io/en/this-site-concept-and-design.html">
+
+</head>
+<body>
+
+
+<header>
+  <div class="scroll-progress scroll-progress-bar scroll-progress-bar-current" aria-hidden="true">
+    <div class="content-default">
+      <div>
+        <img class="logo logo-bw" title="David Bruchmann • Web-Development" alt="logo" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Images/Logo_DB-black.svg" width="140" height="40" />
+        <span class="md">David Bruchmann<br><span class="upper">Web-Development</span></span>
+      </div>
+      <div class="menu-wrap">
+        <div><label for="language-toggle" class="language-btn" title="Language Menu">
+   
+    
+        
+    
+        
+            <span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
+	<span class="icon-markup">
+<img src="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
+	</span>
+	
+</span>
+            <!--<img title="Deutsch" alt="Deutsch" class="flag" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="40" height="24" />-->
+        
+    
+</label></div>
+        <div><label for="appearance-toggle" class="appearance-btn" title="Appearance Toggle"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
+	</span>
+	
+</span></label></div>
+        
+            <div><label for="audio-toggle" class="audio-btn" title="Audio Player" style="filter: saturate(0%) brightness(200%); "><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-music" data-identifier="actions-music" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-music" /></svg>
+	</span>
+	
+</span></label></div>
+        
+        <div>
+            <label for="menu-toggle" class="hamburger-btn" title="Page Menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-progress scroll-progress-bar-remaining">
+    <div class="content" aria-hidden="true">
+      <div>
+        <img class="logo" title="David Bruchmann • Web-Development" alt="logo" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Images/Logo_DB-black.svg" width="140" height="40" />
+        <span class="md">David Bruchmann<br><span class="upper">Web-Development</span></span>
+      </div>
+      <div class="menu-wrap">
+        <div><label for="language-toggle" class="language-btn" title="Language Menu">
+   
+    
+        
+    
+        
+            <span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
+	<span class="icon-markup">
+<img src="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
+	</span>
+	
+</span>
+            <!--<img title="Deutsch" alt="Deutsch" class="flag" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="40" height="24" />-->
+        
+    
+</label></div>
+        <div><label for="appearance-toggle" class="appearance-btn" title="Appearance Toggle"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
+	</span>
+	
+</span></label></div>
+        
+            <div><label for="audio-toggle" class="audio-btn" title="Audio Player" style="filter: saturate(0%) brightness(0%)"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-music" data-identifier="actions-music" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-music" /></svg>
+	</span>
+	
+</span></label></div>
+        
+        <div>
+            <label for="menu-toggle" class="hamburger-btn" title="Page Menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-progress scroll-progress-bar-overlay menu-outer-wrap">
+
+    <div class="content">
+      <div>
+        <a href="/de/" class="root-link"><img class="logo" title="David Bruchmann • Web-Development" alt="logo" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Images/Logo_DB-transparent.svg" width="140" height="40" /></a>
+        <a href="/de/" class="root-link"><span class="md">David Bruchmann<br><span class="upper">Web-Development</span></span></a>
+      </div>
+      <div class="menu-wrap">
+
+        <div>
+          <input type="checkbox" id="language-toggle" class="language-toggle menu-toggle">
+          <label for="language-toggle" class="language-btn" title="Language Menu">
+   
+    
+        
+    
+        
+            <span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
+	<span class="icon-markup">
+<img src="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
+	</span>
+	
+</span>
+            <!--<img title="Deutsch" alt="Deutsch" class="flag" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="40" height="24" />-->
+        
+    
+</label>
+          <nav class="language-menu">
+            
+   
+   
+   
+      <ul>
+         
+            <li class="
+                    ">
+               
+                     <a href="/en/this-site-concept-and-design.html" hreflang="en-US" class="lang-link">
+                        <span class="flag-icon"><span title="English" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-gb" data-identifier="flags-gb" aria-hidden="true">
+	<span class="icon-markup">
+<img src="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/gb.webp" width="32" height="32" alt="" />
+	</span>
+	
+</span><!--<img title="English" alt="English" class="flag" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/gb.svg" width="30" height="15" />--></span>
+                        <span>English</span>
+                     </a>
+                  
+            </li>
+         
+            <li class="active
+                    ">
+               
+                     <a href="/de/konzept-und-design-dieser-webseite.html" hreflang="de-DE" class="lang-link">
+                        <span class="flag-icon"><span title="Deutsch" class="t3js-icon icon icon-size-medium icon-state-default icon-flags-de" data-identifier="flags-de" aria-hidden="true">
+	<span class="icon-markup">
+<img src="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/Flags/de.webp" width="32" height="32" alt="" />
+	</span>
+	
+</span><!--<img title="Deutsch" alt="Deutsch" class="flag" src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/Icons/de.svg" width="30" height="18" />--></span>
+                        <span>Deutsch</span>
+                     </a>
+                  
+            </li>
+         
+      </ul>
+   
+
+          </nav>
+        </div>
+
+        <div>
+          <input type="checkbox" id="appearance-toggle" class="appearance-toggle menu-toggle">
+          <label for="appearance-toggle" class="appearance-btn" title="Appearance Toggle"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
+	</span>
+	
+</span></label>
+          <nav class="appearance-menu">
+            <select name="appearance" size="3">
+              <option value="system"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-circle-half" data-identifier="actions-circle-half" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-circle-half" /></svg>
+	</span>
+	
+</span> System</option>
+              <option value="light"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-brightness-high" data-identifier="actions-brightness-high" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-brightness-high" /></svg>
+	</span>
+	
+</span> Light mode</option>
+              <option value="dark"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-moon" data-identifier="actions-moon" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-moon" /></svg>
+	</span>
+	
+</span> Dark mode</option>
+            </select>
+          </nav>
+        </div>
+
+        <!--
+            <div id="audio-player" class="audio-player">
+              <input type="checkbox" id="audio-toggle" class="audio-toggle menu-toggle">
+              <div class="audio-toggle-container">
+                < ! -- Main 40px Icon Trigger Button -- >
+                <button id="btn-toggle-flyout" class="flyout-trigger" aria-label="Toggle audio player panel">
+                  <label for="audio-toggle" class="audio-btn" title="Audio Player">🎵</label>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3v18l-6-6H2V9h4l6-6zm4.5 9c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                  </svg>
+                </button>
+              </div>
+        -->
+        
+            <div id="audio-player" class="audio-player">
+              <input type="checkbox" id="audio-toggle" class="audio-toggle menu-toggle">
+              <label for="audio-toggle" class="audio-btn" title="Audio Player"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-music" data-identifier="actions-music" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-music" /></svg>
+	</span>
+	
+</span></label>
+                  <!--<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3v18l-6-6H2V9h4l6-6zm4.5 9c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                  </svg>-->
+              <nav class="audio-menu">
+                <!--<div style="width:120px;height:60px;background:var(--bg-color);margin:1rem;">AUDIO</div>-->
+                <div class="playerWrapper" aria-label="Audio player">
+                    <div class="textContainer">
+                      <div class="displayText" aria-live="polite" aria-label="Now playing: Phish Funk [Best Bytes Volume 4] Phish Funk – Hold On">Phish Funk [Best Bytes Volume 4] Phish Funk – Hold On</div>
+                    </div>
+
+                    <div class="progressControl horizontal">
+                    <div class="times">
+                      <time id="progressElm" class="progress">0:00</time>
+                      <time id="durationElm" class="duration">6:22</time>
+                    </div>
+                      <div id="progressSlider" class="progressSlider" role="slider" aria-label="Progress control" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" tabindex="0">
+                        <div id="progressTrack" class="progressTrack" style="background: linear-gradient(to left, rgb(102, 102, 102) 0%, rgb(102, 102, 102) 100%, rgb(30, 144, 255) 100%, rgb(30, 144, 255) 100%);">
+                          <div id="progressThumb" class="progressThumb" style="left: 0%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--
+                    <div class="progressControl horizontal">
+                      <div>
+                          <div id="progressCurrent" class="progressIndicator progressCurrent"><label>Played: <time></time></label></div>
+                          <div id="progressRemaining" class="progressIndicator progressRemaining"><label>Remaining: <time></time></label></div>
+                      </div>
+                      <div id="progressSlider" class="progressSlider" role="slider" aria-label="Progress control" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" tabindex="0">
+                        <div id="progressTrack" class="progressTrack" style="background: linear-gradient(to left, rgb(102, 102, 102) 0%, rgb(102, 102, 102) 100%, rgb(30, 144, 255) 100%, rgb(30, 144, 255) 100%);">
+                          <div id="progressThumb" class="progressThumb" style="left: 0%;"></div>
+                        </div>
+                      </div>
+                      <div id="progressDuration" class="progressIndicator progressDuration"><label>Length: <time></time></label></div>
+                    </div>
+                    -->
+                  <div class="audioPlayer">
+
+                    <div class="button-bar">
+                      <button id="btn-prev" class="btn-audiobar btn-prev" title="Previous (arrow keys to navigate)" aria-label="Previous track" tabindex="0"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-chevron-double-start icon-bidi" data-identifier="actions-chevron-double-start" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-chevron-double-start" /></svg>
+	</span>
+	
+</span></button>
+                      <button id="btn-toggle-play-pause" class="btn-audiobar btn-toggle-play-pause" title="Play" aria-label="Play" tabindex="-1"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-play" data-identifier="actions-play" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-play" /></svg>
+	</span>
+	
+</span><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-pause" data-identifier="actions-pause" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-pause" /></svg>
+	</span>
+	
+</span></button>
+                      <button id="btn-stop" class="btn-audiobar btn-stop" title="Stop" aria-label="Stop"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-square" data-identifier="actions-square" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-square" /></svg>
+	</span>
+	
+</span></button>
+                      <button id="btn-next" class="btn-audiobar btn-next" title="Next" aria-label="Next track" tabindex="-1"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-chevron-double-end icon-bidi" data-identifier="actions-chevron-double-end" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-chevron-double-end" /></svg>
+	</span>
+	
+</span></button>
+                    </div>
+                      <!--
+                      <button id="btn-fadeIn" class="btn-audiobar">fade in</button>
+                      <button id="btn-fadeOut" class="btn-audiobar">fade out</button>
+                      <button id="btn-crossFade">Cross-fade</button>
+                      <button class="btn-audio btn-audio-shuffle" title="Shuffle: off (arrow keys to navigate)" aria-label="Shuffle: off" tabindex="-1">Shuffle</button>
+                      <div class="shuffleMenu">
+                        <div class="shuffleMenuOption selected focused" role="button" tabindex="0">Off</div>
+                        <div class="shuffleMenuOption" role="button" tabindex="0">All</div>
+                        <div class="shuffleMenuOption" role="button" tabindex="0">Album</div>
+                        <div class="shuffleMenuOption" role="button" tabindex="0">Artist</div>
+                      </div>
+                      -->
+                    <div class="volumeControl horizontal">
+                      <button id="btn-mute" class="btn-audiobar btn-mute" title="Mute" aria-label="Mute" tabindex="-1"><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-bullhorn" data-identifier="actions-bullhorn" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-bullhorn" /></svg>
+	</span>
+	
+</span><span class="t3js-icon icon icon-size-medium icon-state-default icon-actions-bullhorn-slash" data-identifier="actions-bullhorn-slash" aria-hidden="true">
+	<span class="icon-markup">
+<svg class="icon-color"><use xlink:href="/assets/1ee1d3e909b58d32e30dcea666dd3224/Icons/T3Icons/sprites/actions.svg#actions-bullhorn-slash" /></svg>
+	</span>
+	
+</span></button>
+                      <div id="volumeSlider" class="volumeSlider" role="slider" aria-label="Volume control" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100" tabindex="0">
+                        <div id="volumeTrack" class="volumeTrack" style="background: linear-gradient(to left, rgb(102, 102, 102) 0%, rgb(102, 102, 102) 74.1667%, rgb(30, 144, 255) 74.1667%, rgb(30, 144, 255) 100%);">
+                          <div id="volumeThumb" class="volumeThumb" style="left: 33%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3>Playlist</h3>
+                  <div id="playlist-container" class="playlistContainer" aria-label="Audio Track Playlist"></div>
+                </div>
+              </nav>
+            </div>
+        
+
+        <div>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle">
+          <label for="menu-toggle" class="hamburger-btn" title="Page Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
+          <nav class="menu" id="main-menu">
+            <!-- <div class="jugendstil-flyout-profile"></div> -->
+            
+<ul>
+    <li class="">
+        <a href="/de/" target="">
+            Startseite
+        </a>
+    </li>
+    
+        <li class="active current">
+            <a href="/de/konzept-und-design-dieser-webseite.html" target="">
+                Konzept und Design dieser Webseite
+            </a>
+            
+        </li>
+    
+        <li class="">
+            <a href="/de/open-source.html" target="">
+                Open Source
+            </a>
+            
+        </li>
+    
+        <li class="">
+            <a href="/de/website-technologien.html" target="">
+                Website-Technologien
+            </a>
+            
+                <ul>
+                    
+                        <li class="">
+                            <a href="/de/website-technologien/typo3-webeiten.html" target="">
+                                TYPO3 Webeiten
+                            </a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="/de/website-technologien/translate-to-german-spa.html" target="">
+                                SPA
+                            </a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="/de/website-technologien/statische-webseiten.html" target="">
+                                Statische Webseiten
+                            </a>
+                        </li>
+                    
+                </ul>
+            
+        </li>
+    
+</ul>
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main id="main-content">
+<!-- 2. The SPA Content Container (Swapped out by main.js) -->
+  
+    <div class="row">
+        
+    
+    
+
+            <div id="c25" class="frame frame-default frame-type-header frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            <h1 class="">
+                Funktionen dieser Website
+            </h1>
+        
+
+
+
+            
+
+    
+            <h2 class="">
+                ... und Optionen für Ihre Webseite!
+            </h2>
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c32" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                TYPO3, Design, Templating und Funktionen
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Design und Templates sind vollständig mit TYPO3 umgesetzt; selbst die Playlist für den Media-Player wird über eine Extension generiert, und Icons werden mittels TYPO3-ViewHelpern eingebunden. Auf dieser Basis lassen sich problemlos neue Layouts, Unterseiten oder Funktionen ergänzen. TYPO3 wird hier seiner Rolle als „Content-Management-System“ im wahrsten Sinne des Wortes gerecht!<br>In den folgenden Abschnitten finden Sie Einzelheiten zu verschiedenen Funktionen dieser Website, die allesamt mit TYPO3 realisiert wurden.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c28" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Auffällige Kopfbereich mit Scroll-Fortschrittsanzeige und den wichtigsten Navigationselementen
+            </h2>
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Der obere Bereich der Benutzeroberfläche wird durch einen dauerhaft sichtbaren, platzsparenden Kopfbereich definiert, der das zentrale Branding sowie die wichtigsten Funktionsschalter enthält. Um dem Nutzer einen sofortigen visuellen Anhaltspunkt zu bieten, ohne das Layout zu überladen, fungiert der Kopfbereich selbst als auffällige Scroll-Fortschrittsanzeige – insbesondere durch seine Farbgebung und die Farbwechsel der Symbole beim Scrollen. Während der Nutzer durch einen Seitenabschnitt navigiert, füllt sich die Anzeigeleiste dynamisch von links nach rechts und liefert so eine intuitive räumliche Orientierungshilfe bei umfangreichen Inhalten.</p>
+<p>Der Navigationsbereich selbst ist auf das absolut Wesentliche reduziert, um auf kleineren Viewports für ausreichend Freiraum zu sorgen. Er enthält lediglich das Hauptlogo sowie eine einheitliche Reihe funktionaler Umschalter:</p><ul><li data-list-item-id="eccc78aca16c5f2d55f8ef26abe4a42c3"><strong>Sprachauswahl:</strong> Wechselt zwischen lokalisierten Inhalten (/en/ and /de/).</li><li data-list-item-id="e3bfce86590387ee0c52dc02a7efdfefb"><strong>Design-Umschalter:</strong> Schaltet zwischen dem dunklen und dem hellen Design-Theme der Website um.</li><li data-list-item-id="eab24f233bdfcae59c9a650f8b25e8e50"><strong>Media-Player-Button:</strong> zeigt oder versteckt das Bedienfeld für die Audiowiedergabe.</li><li data-list-item-id="e220f7e0842a3f319a51049b6e33f6a04"><strong>Hamburger Menü:</strong> Bietet Zugang zur Seitennavigation.</li></ul><p>Um die Anwendung schlank, reaktionsschnell, barrierefrei und zuverlässig zu halten, nutzen die Untermenüs für diese Elemente ein CSS-basiertes Einblendkonzept. Anstatt JavaScript für Animationen einzusetzen, verwenden die Menüs CSS; sie sind somit vollständig barrierefrei und kommen ohne JavaScript aus.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c39" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            <h3 class="">
+                Der Web-Audio Player
+            </h3>
+        
+
+
+
+            
+
+    
+            <h4 class="">
+                Maßgeschneiderte Wiedergabe und nahtlose Steuerung
+            </h4>
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Während die herkömmliche Webentwicklung häufig auf das native `&lt;audio&gt;`-Element des Browsers setzt, bringt dieser Standardansatz deutliche visuelle und funktionale Einschränkungen mit sich. Native Audiosteuerelemente sehen in jedem Browser anders aus, lassen sich nicht ohne Weiteres per Stylesheet anpassen und sind primär für die Wiedergabe einer einzelnen, isolierten Audiodatei ausgelegt, anstatt eine laufende Zusammenstellung zu verwalten. Dieser maßgeschneiderte Web-Audio-Player schließt diese Lücken, indem er die Benutzeroberfläche vom zugrundeliegenden Audiostream entkoppelt.</p>
+<h4>Wichtige Vorteile</h4><ul style="margin-left:0px;"><li style="margin-left:0px;" data-list-item-id="e66a86d942cca3fc1204c61bb70b7089a"><strong>Komplette Freiheit bei Styling and Design:</strong> Da die Benutzeroberfläche auf Standard-HTML, CSS und Vanilla-JavaScript basiert, lässt sich das Layout des Players vollständig anpassen. Bedienelemente, Textausgaben, ausziehbare Container und individuelle vertikale Lautstärkeregler können so gestaltet werden, dass sie perfekt zum Branding der Website passen. Dies gewährleistet ein einheitliches Erscheinungsbild über alle Browser und Geräte hinweg und umgeht dabei vollständig die starren, nicht anpassbaren Standard-Player-Oberflächen der Browser.</li><li style="margin-left:0px;" data-list-item-id="e4112330c1c9c167791ea78df9ae62c75"><strong>30 Kontinuierliche Playlist-Wiedergabe:</strong> Standard-Audio-Tags erfordern einen manuellen Eingriff durch den Nutzer, um nachfolgende Dateien zu laden und abzuspielen. Diese maßgeschneiderte Integration verfügt über eine intelligente Sequenz-Steuerung, die Wiedergabelisten-Indizes verwaltet, Titelwechsel per Direktklick ermöglicht und automatisch den nächsten Titel startet, sobald der aktuelle Audiostream sein natürliches Ende erreicht.</li><li data-list-item-id="e82f185da5573b74615317646622f6bf0"><strong>Erweiterbarkeit:</strong> Weitere Elemenete und Funktionen können problemlos hinzugefügt werden, um gesteigerten Anforderungen oder Ansprüchen gerecht zu werden.</li><li data-list-item-id="e565a16074aa9678ba937eb49a5a14dfb"><strong>Interaktivität:</strong> Wenn verschiedene Wiedergabelisten (Playlists) vorbereitet und gespeichert werden, ergibt sich die Option, <strong>sogar für statische Webseiten</strong>, dass Benutzer auswählen können, welche Liste abgespielt wird. In normalen (dynamischen) TYPO3-Installationen kann ein Erweiterung eine Benutzerwahl handhaben, ohne Notwendigkeit etwas im Vorraus zu speichern.</li></ul><h4>Vielfältige Anwendungsbereiche</h4>
+<p>Die Flexibilität einer entkoppelten, kontinuierlichen Audio-Umgebung eröffnet verschiedene praktische Implementierungsmöglichkeiten auf unterschiedlichen digitalen Plattformen:</p><ul style="margin-left:0px;"><li style="margin-left:0px;" data-list-item-id="e8530991d147d2696b51a3c3ce8b591e9"><strong>Music Plattformen &amp; DJ Decks:</strong> Herkömmliche Portfolios, Band-Websites und Musik-Hubs können problemlos Alben oder Hintergrundtitellisten präsentieren, die für Benutzer einfach steuer- und durchsuchbar sind.</li><li style="margin-left:0px;" data-list-item-id="e2a1f5f60e87fce9357cecb2ebc6db33a"><strong>Podcasts &amp; Serien Netzwerke:</strong> Plattformen für Audioinhalte können Episoden in eine Wiedergabeliste einreihen, Wiedergabepositionen speichern oder spezifische Metadaten zur Episode nativ neben den Bedienelementen anzeigen.</li><li style="margin-left:0px;" data-list-item-id="eb2877bfb81546506a5b0e6a092e06ec3"><strong>E-Learning &amp; Sprachkurse:</strong> Bildungsportale können aufeinanderfolgende Audio-Vorlesungen, Schritt-für-Schritt-Anleitungen zur Aussprache oder Hörbücher bündeln. Da der Player in einem dauerhaft eingeblendeten Frame läuft, können Studierende Arbeitsblätter bearbeiten, Lernmodule durchblättern oder sich auf verschiedenen Seiten Notizen machen, während die Audio-Lektion ununterbrochen weiterläuft.</li><li style="margin-left:0px;" data-list-item-id="edd38435a54b381a4cc03b28e7ad32d64"><strong>Geführte Audiotouren &amp; Storytelling:</strong> Museumsführungen, Immobilienbesichtigungen und interaktive Reiseblogs können spezifische Tonspuren mit Lageplänen oder Artikelabschnitten synchronisieren und so eine automatisierte Erzählebene bereitstellen, während der Besucher die Inhalte erkundet.</li><li style="margin-left:0px;" data-list-item-id="e6eb87198d6a2b79b7ede868bdbb329e5"><strong>Ambient-Klangwelten &amp; Fokus-Arbeitsbereiche:</strong> Plattformen, die sich auf Wellness, Meditation oder konzentriertes Arbeiten konzentrieren, können sich wiederholende Hintergrundgeräuschkanäle, Konfigurationen mit weißem Rauschen oder Fokus-Beats bereitstellen, die kontinuierlich in einem ressourcenschonenden und leicht zugänglichen Container ablaufen.</li></ul>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c31" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            <h2 class="">
+                CMS-unabhängige Funktionen
+            </h2>
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>TYPO3 dient als Content-Management-System vollständig als Plattform für die Erstellung dieser Website, einschließlich Design, Templates und sämtlicher technischer Funktionen. Es gibt jedoch zwei wichtige Funktionen, die unabhängig davon darauf aufbauen und in den folgenden kurzen Abschnitten beschrieben werden.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c26" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            <h3 class="">
+                Single Page Application (SPA)
+            </h3>
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Single-Page-Application (SPA) Obwohl diese Website viele Funktionen bietet, die auf JavaScript basieren, ist sie auch ohne dieses weitgehend voll funktionsfähig. Als Hybridlösung ermöglicht JavaScript jedoch eine wesentliche Funktion: die Single-Page-Application (SPA). Dabei wird die Seite beim Wechsel nicht komplett neu geladen; stattdessen werden lediglich bestimmte Inhalte und Elemente innerhalb der bereits geladenen Seite ausgetauscht. Dies ermöglicht seitenübergreifende Funktionen – wie etwa einen Mediaplayer –, die andernfalls unterbrochen oder zurückgesetzt würden.<br>Das Nutzererlebnis ist angenehmer, da neue Inhalte in vordefinierten Bereichen geladen werden, ohne dass es normalerweise zu einem vollständigen Neuladen der Seite kommt. Unerfahrenen Nutzern fällt dieser Komfort zwar nicht bewusst auf, doch sie nehmen wahr, dass alles irgendwie flüssiger abläuft als auf anderen Websites.</p>
+<p><a href="/de/website-technologien/translate-to-german-spa.html">Hier erfahren Si mehr zu <i>Single Page Applications</i>.</a></p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+    
+    
+
+            <div id="c27" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+    
+    
+        <header>
+            
+
+    
+            <h3 class="">
+                Die statische Seiten-Spiegelung
+            </h3>
+        
+
+
+
+            
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p>Die Veröffentlichung statischer Websites bedeutet, dass diese über keinen Server verfügen, der auf Benutzereingaben reagieren kann. Es gibt weder eine Datenbank noch serverseitige Software, die auf Benutzerinteraktionen reagieren könnte. Stattdessen bieten statische Websites nur sehr begrenzte Möglichkeiten, Benutzerentscheidungen zu berücksichtigen, sofern diese nicht direkt im Code selbst implementiert sind.</p>
+<p>Dieses Projekt wird als vollständig statische Installation auf GitHub Pages (via github.io) bereitgestellt. Da eine hybride SPA-Fallback-Architektur – bei Entkopplung von der Backend-Datenbank – ausschließlich auf reinen HTML-Dateien und clientseitigen JavaScript-Routern basiert, lässt sie sich mühelos in ein serverloses Format exportieren. Der Betrieb der Plattform als statische Website bietet mehrere wesentliche architektonische Vorteile:</p><ul><li data-list-item-id="e1839a4edc91a8c6bb44c6c5cc93d0bbc"><strong>Höchste Sicherheit:</strong> Ohne zugrundeliegende Datenbank, aktive Content-Management-Prozesse oder PHP-Verarbeitungsthreads auf dem Produktions-Spiegel werden die gängigen Angriffsvektoren für Datenschutzverletzungen, SQL-Injection und Backend-Exploits vollständig eliminiert.</li><li data-list-item-id="e3538991ae7d512d0eb229ef8e482ca6b"><strong>Maximale Leistung und global hohe Ladegeschwindigkeiten:</strong> Die Website besteht ausschließlich aus vorgerenderten, schlanken Assets, die keine serverseitige Kompilierungszeit erfordern. Diese statischen Dateien werden sofort über globale Content Delivery Networks (CDNs) ausgeliefert, was zu minimalen Werten bei der „Time to First Byte“ (TTFB) führt.</li><li data-list-item-id="ef134ac98333681e8d68815abbea8c6ff"><strong>Wartungsfreie Infrastruktur:</strong> Es müssen keine Datenbank-Systeme optimiert, keine Server-Betriebssystem-Patches überwacht und keine Skalierungsengpässe bewältigt werden. Die Seiten-Spiegelung bleibt durchgehend stabil und kosteneffizient, unabhängig von plötzlichen Verkehrsspitzen.</li></ul><p><a href="/de/website-technologien/statische-webseiten.html">Hier können Sie weitere Vorteile und Details zu statischen Webseiten erfahren.</a></p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+
+    </div>
+
+  
+</main>
+<footer>
+    <div class="row">
+      <address class="address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <p><span itemprop="name">Webdevelopment Barlian</span><br>
+        <span itemprop="owner">David Bruchmann</span></p>
+
+        <p>
+        <span itemprop="streetAddress">Jalan Pasundan 118</span><br>
+        <span itemprop="addressLocality">Bandung</span> <span itemprop="postalCode">40252</span>
+        </p>
+
+        <p><span itemprop="addressRegion">West Java</span><br>
+        <span itemprop="addressCountry">Indonesia</span>
+        </p>
+
+        <p>Github:  <a href="https://github.com/DavidBruchmann" target="_blank">github.com/DavidBruchmann</a><br>
+        Mail:  <span itemprop="email"><a href="mailto:david.bruchmann@gmail.com" target="_blank">david.bruchmann@gmail.com</a></span>
+        </p>
+      </address>
+      <div class="copyright">&copy; 2026 David Bruchmann</div>
+    </div>
+</footer>
+
+    <!-- 3. The Persistent Media Player (Never Interrupts) -->
+    <!-- <div class="media-player-dock">
+        <audio id="global-player" src="/path-to-stream.mp3" controls></audio>
+    </div> -->
+  </div>
+
+<script>
+
+
+</script>
+
+<script src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/main.js"></script>
+<script src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/AudioPlayerApp.js"></script>
+<script src="/assets/7a07a133fbaf99c0395fd0ec2ba41135/JavaScript/appearance-toogle.js"></script>
+
+
+</body>
+</html>
