@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const audioPlayer = new AudioPlayerApp();
   audioPlayer.setVolume(33);
-  console.log(audioPlayer);
+  // console.log(audioPlayer);
   audioPlayer.setSrc('/fileadmin/MP3/Phish_Funk--Hold_On.mp3');
   audioPlayer.setNextSrc('/fileadmin/MP3/Phish_Funk--The_Squelch.mp3');
 
