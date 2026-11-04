@@ -3,11 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedLanguage = localStorage.getItem('user-language');
   const currentPath = window.location.pathname;
   // Auto-route to language directory if user lands on raw root root index
-  if (savedLanguage && (currentPath === '/' || currentPath === '/index.html')) {
-      const targetLangFolder = savedLanguage.toLowerCase().substring(0,2) + '/';
-      if (!currentPath.includes(targetLangFolder)) {
-          loadSpaPage(targetLangFolder);
-      }
+  if (currentPath === '/' || currentPath === '/index.html') {
+    let targetLangFolder = 'en/';
+    if (savedLanguage) {
+      savedLanguage.toLowerCase().substring(0,2) + '/';
+    }
+    if (!currentPath.includes(targetLangFolder)) {
+        loadSpaPage(targetLangFolder);
+    }
   }
 
   // CENTRALIZED ROUTER: Event Delegation for all menus and language links
