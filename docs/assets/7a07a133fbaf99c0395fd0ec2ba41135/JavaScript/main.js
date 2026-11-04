@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentPath = window.location.pathname;
   // Auto-route to language directory if user lands on raw root root index
   if (savedLanguage && (currentPath === '/' || currentPath === '/index.html')) {
-      const targetLangFolder = `/${savedLanguage.toLowerCase()}/`;
+      const targetLangFolder = savedLanguage.toLowerCase().substring(0,1);
       if (!currentPath.includes(targetLangFolder)) {
           loadSpaPage(targetLangFolder);
       }
