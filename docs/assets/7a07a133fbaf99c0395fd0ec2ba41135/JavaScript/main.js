@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (currentPath === '/' || currentPath === '/index.html') {
     let targetLangFolder = 'en/';
     if (savedLanguage) {
-      savedLanguage.toLowerCase().substring(0,2) + '/';
-    }
-    if (!currentPath.includes(targetLangFolder)) {
+      targetLangFolder = savedLanguage.toLowerCase().substring(0,2) + '/';
+      if (!currentPath.includes(targetLangFolder)) {
         loadSpaPage(targetLangFolder);
+      }
     }
   }
 
